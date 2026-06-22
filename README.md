@@ -487,12 +487,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Termux community for Android support
 - Contributors and users of VPSH
 
-## 📞 Support
-
-- 📧 Issues: [GitHub Issues](https://github.com/batmanpriv/VPSH/issues)
-- 🌐 Repository: [GitHub](https://github.com/batmanpriv/VPSH)
-- 📖 Wiki: [Documentation](https://github.com/batmanpriv/VPSH/wiki)
-
 ---
 
 <div align="center">
