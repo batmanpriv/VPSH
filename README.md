@@ -21,6 +21,7 @@ VPSH is a versatile proxy server solution that transforms your device into a ful
 - ♻️ **Auto-Restart** - Self-healing with health monitoring
 - 📊 **Client Management** - Track connected clients
 - 🎨 **Beautiful UI** - Colorful terminal output with QR codes
+- 🪟 **Windows Client** - Easy proxy management with SetProxy.bat
 
 ## 📸 Screenshots
 
@@ -50,6 +51,9 @@ curl -o vpsh.sh https://raw.githubusercontent.com/batmanpriv/VPSH/main/vpsh.sh
 chmod +x vpsh.sh
 ./vpsh.sh start
 ```
+
+#### Windows (Client Only)
+Download `SetProxy.bat` from the repository and run it.
 
 ## 📖 Usage Examples
 
@@ -100,27 +104,66 @@ sudo ./vpsh.sh start --profile=gaming --transparent
 ./vpsh.sh start --no-auto-restart --debug
 ```
 
-### Windows Client Setup
+## 🪟 Windows Client (SetProxy.bat)
+
+VPSH includes a powerful Windows client script for easy proxy management.
+
+### Interactive Mode
+```cmd
+# Double-click the file or run without arguments
+SetProxy.bat
+
+# This opens an interactive menu:
+# [1] Connect to Proxy
+# [2] Disconnect Proxy
+# [3] Show Status
+# [4] Test Connection
+# [5] Exit
+```
+
+### Command Line Mode
 
 ```cmd
-# Connect to proxy
+# Connect to proxy (without authentication)
 SetProxy.bat connect 192.168.1.100 8888
 
-# Connect with authentication
+# Connect with authentication (username and password are optional)
 SetProxy.bat connect 192.168.1.100 8888 myuser mypass
 
-# Disconnect
+# If you don't have username/password, just skip them:
+SetProxy.bat connect 192.168.1.100 8888
+
+# Disconnect proxy
 SetProxy.bat disconnect
 
-# Check status
+# Check current status
 SetProxy.bat status
 
-# Test connection
+# Test proxy connection
 SetProxy.bat test
 
-# Interactive mode
-SetProxy.bat
+# Show help
+SetProxy.bat help
 ```
+
+### What SetProxy.bat Does
+
+- 🔧 Configures Windows system proxy settings
+- 🔄 Sets environment variables (HTTP_PROXY, HTTPS_PROXY)
+- 🧹 Clears browser cache for immediate effect
+- 🧪 Tests connection through the proxy
+- 📊 Shows real-time status and connected settings
+
+### Windows Client Features
+
+| Feature | Description |
+|---------|-------------|
+| **System Proxy** | Configures Windows Internet Settings |
+| **Environment Variables** | Sets HTTP_PROXY, HTTPS_PROXY, FTP_PROXY |
+| **Persistent Settings** | Remembers configuration across sessions |
+| **Test Connection** | Verifies proxy is working correctly |
+| **Status Display** | Shows current proxy configuration |
+| **Interactive Menu** | User-friendly interface for non-technical users |
 
 ## ⚙️ Configuration
 
@@ -160,6 +203,105 @@ PROXY_USER="myuser"
 PROXY_PASS="mypass"
 ```
 
+## 📱 How to Use on Devices
+
+### Android Phone Setup 📱
+
+#### Method 1: WiFi Proxy Settings
+1. **Turn on your hotspot** on the VPSH device
+2. **Connect your Android phone** to the hotspot
+3. **Open WiFi Settings** on your phone
+4. **Long press** on the connected hotspot network
+5. Select **Modify Network** or **Manage Network Settings**
+6. **Check** "Show advanced options" or "Proxy"
+7. Set **Proxy** to **Manual**
+8. Enter details:
+   - **Proxy Hostname**: The IP shown in VPSH (e.g., 192.168.43.1)
+   - **Proxy Port**: The HTTP port (e.g., 8888)
+   - **Bypass Proxy for**: Leave empty or add local IPs
+   - **Username**: Only if authentication is enabled
+   - **Password**: Only if authentication is enabled
+9. **Save** and reconnect to the network
+
+#### Method 2: Using PAC (Proxy Auto-Config)
+Some Android versions support PAC URLs:
+```
+http://[VPSH_IP]:[PORT]/proxy.pac
+```
+
+#### Method 3: Rooted Android
+For rooted devices with transparent proxy enabled, no configuration needed!
+
+### iOS Setup 📱
+
+1. Connect to the hotspot
+2. Go to **Settings → Wi-Fi**
+3. Tap the **"i"** icon next to the connected network
+4. Scroll to **HTTP Proxy**
+5. Select **Manual**
+6. Enter:
+   - **Server**: VPSH IP address
+   - **Port**: HTTP proxy port
+   - **Authentication**: Toggle ON if needed
+   - **Username/Password**: Only if authentication is enabled
+
+### Linux/macOS Setup 💻
+
+```bash
+# Set environment variables (without auth)
+export http_proxy=http://192.168.1.100:8888
+export https_proxy=http://192.168.1.100:8888
+
+# With authentication (optional)
+export http_proxy=http://user:pass@192.168.1.100:8888
+export https_proxy=http://user:pass@192.168.1.100:8888
+
+# Make permanent (add to ~/.bashrc or ~/.zshrc)
+echo 'export http_proxy=http://192.168.1.100:8888' >> ~/.bashrc
+echo 'export https_proxy=http://192.168.1.100:8888' >> ~/.bashrc
+
+# Test connection
+curl -I --proxy http://192.168.1.100:8888 https://google.com
+```
+
+### Windows Setup 🪟
+
+#### Method 1: Using SetProxy.bat (Recommended)
+```cmd
+# Just run with the proxy details
+SetProxy.bat connect 192.168.1.100 8888
+
+# For auth (username/password optional)
+SetProxy.bat connect 192.168.1.100 8888 myuser mypass
+```
+
+#### Method 2: Manual Windows GUI
+1. Open **Internet Options** (Search "Internet Options" in Start Menu)
+2. Go to **Connections** tab
+3. Click **LAN settings**
+4. Enable **Use a proxy server**
+5. Enter:
+   - **Address**: VPSH IP address
+   - **Port**: HTTP proxy port
+6. Click **OK**
+
+#### Method 3: Browser Settings
+
+##### Chrome/Edge
+```
+Settings → System → Open your computer's proxy settings
+Or use command line:
+chrome.exe --proxy-server="http://192.168.1.100:8888"
+```
+
+##### Firefox
+```
+Settings → Network Settings → Manual proxy configuration
+HTTP Proxy: 192.168.1.100
+Port: 8888
+✓ Also use this proxy for HTTPS
+```
+
 ## 🎯 Proxy Methods
 
 | Method | Description | Use Case |
@@ -181,7 +323,7 @@ PROXY_PASS="mypass"
 5. Enter:
    - **Host**: IP address from VPSH display
    - **Port**: HTTP proxy port
-   - **Username/Password**: If authentication is enabled
+   - **Username/Password**: If authentication is enabled (optional)
 
 ### Linux/macOS
 
@@ -289,6 +431,29 @@ sudo ./vpsh.sh start --transparent
 ./vpsh.sh restart --debug
 ```
 
+### Windows Client Issues
+
+#### Proxy Not Connecting
+```cmd
+# Test connection
+SetProxy.bat test
+
+# Check status
+SetProxy.bat status
+
+# Disconnect and reconnect
+SetProxy.bat disconnect
+SetProxy.bat connect 192.168.1.100 8888
+```
+
+#### Authentication Issues
+```cmd
+# Clear credentials and reconnect
+setx PROXY_USER ""
+setx PROXY_PASS ""
+SetProxy.bat connect 192.168.1.100 8888 myuser mypass
+```
+
 ## 📊 Monitoring
 
 ### View Connected Clients
@@ -319,6 +484,7 @@ tail -f python_proxy.log
 - 🌐 Transparent proxy requires root privileges
 - 🔑 Change default credentials immediately
 - 📍 Proxy is accessible from all interfaces by default
+- 🪟 Windows credentials are stored in environment variables
 
 ## 📝 License
 
