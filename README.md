@@ -43,15 +43,6 @@ chmod +x vpsh.sh
 ./vpsh.sh start
 ```
 
-#### Linux
-```bash
-sudo apt update
-sudo apt install curl -y
-curl -o vpsh.sh https://raw.githubusercontent.com/batmanpriv/VPSH/main/vpsh.sh
-chmod +x vpsh.sh
-./vpsh.sh start
-```
-
 #### Windows (Client Only)
 Download `SetProxy.bat` from the repository and run it.
 
