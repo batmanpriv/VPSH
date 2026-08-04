@@ -1,81 +1,145 @@
-# VPSH - Virtual Private Share Hub
+# 🦇 VPSH - Virtual Private Share Hub
 
 **Version 3.1.0**
 
-VPSH is an Android application that turns your device into a powerful network sharing hub. It supports both **Proxy Mode** (HTTP/SOCKS5) and **Full VPN Mode** (NAT routing), with advanced features like client management, bandwidth limiting, and the innovative **BatProxy** distributed proxy system.
+<p align="center">
+  <img width="1536" height="1024" alt="VPSH Dashboard" src="https://github.com/user-attachments/assets/01284663-e8da-42e0-8ef7-02c993999c69" />
+</p>
 
 ---
 
-## Table of Contents
-1. [Overview](#overview)
-2. [Installation](#installation)
-3. [First Launch](#first-launch)
-4. [Quick Start Guide](#quick-start-guide)
-5. [Modes of Operation](#modes-of-operation)
+<div align="center">
+
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com/)
+[![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-3.1.0-brightgreen?style=for-the-badge)](https://github.com/batmanpriv/VPSH)
+
+**Turn your Android device into a powerful network sharing hub**
+
+</div>
+
+---
+
+## 📖 Overview
+
+VPSH is an Android application that transforms your device into a versatile network gateway. Whether you need to share a VPN connection, create a secure proxy server, or build a distributed proxy network with Cloudflare Workers, VPSH has you covered.
+
+**Key capabilities:**
+- 🔄 Share internet connection with other devices
+- 🔒 Secure HTTP & SOCKS5 proxy server
+- 🌐 Full VPN NAT routing (root required)
+- 🚀 Distributed proxy via BatProxy
+- 📊 Real-time client monitoring & management
+- ⚡ Bandwidth limiting per client
+
+---
+
+## ✨ Features at a Glance
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 Proxy Mode
+- **No root required**
+- HTTP proxy (default: 8888)
+- Optional SOCKS5 (default: 1080)
+- Username/password authentication
+- Upstream proxy chaining
+- Kill switch protection
+- Client blocking & bandwidth limits
+
+</td>
+<td width="50%">
+
+### 🔒 Full Mode
+- **Root required**
+- Full VPN NAT routing
+- IPv6 leak protection
+- Per-client bandwidth limiting
+- Auto-restart on failure
+- Health monitoring
+- Shares ANY VPN connection
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+### 🦇 BatProxy
+- **Distributed proxy system**
+- Cloudflare Workers integration
+- Automatic failover
+- Smart worker selection
+- Real-time health monitoring
+- Circuit breaker pattern
+- DNS-over-proxy support
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📋 Table of Contents
+
+<details>
+<summary>Click to expand</summary>
+
+1. [Overview](#-overview)
+2. [Features at a Glance](#-features-at-a-glance)
+3. [Installation](#-installation)
+4. [Quick Start Guide](#-quick-start-guide)
+5. [Modes of Operation](#-modes-of-operation)
    - [Proxy Mode](#proxy-mode)
    - [Full Mode (VPN NAT)](#full-mode-vpn-nat)
-6. [Main Dashboard](#main-dashboard)
+6. [Main Dashboard](#-main-dashboard)
    - [Status & Controls](#status--controls)
    - [Client Management](#client-management)
    - [QR Code Sharing](#qr-code-sharing)
    - [Tethering Support](#tethering-support)
-7. [BatProxy Tab](#batproxy-tab)
+7. [BatProxy Tab](#-batproxy-tab)
    - [What is BatProxy?](#what-is-batproxy)
    - [Adding Workers](#adding-workers)
    - [Worker Health & Stats](#worker-health--stats)
    - [DNS Configuration](#dns-configuration)
-8. [Settings](#settings)
-   - [Port Configuration](#port-configuration)
-   - [Authentication](#authentication)
-   - [Upstream Proxy Chaining](#upstream-proxy-chaining)
-   - [Health Monitoring](#health-monitoring)
-   - [Full Mode Settings](#full-mode-settings)
-   - [Interface Overrides](#interface-overrides)
-9. [Logs & Health Checks](#logs--health-checks)
-10. [Quick Settings Tile](#quick-settings-tile)
-11. [Client Setup Guide](#client-setup-guide)
-    - [Connecting via HTTP Proxy](#connecting-via-http-proxy)
-    - [Connecting via SOCKS5](#connecting-via-socks5)
-    - [Using the QR Code](#using-the-qr-code)
-    - [Using BatProxy Clients](#using-batproxy-clients)
-12. [Troubleshooting](#troubleshooting)
-13. [FAQ](#faq)
+8. [Settings](#-settings)
+9. [Client Setup Guide](#-client-setup-guide)
+10. [Troubleshooting](#-troubleshooting)
+11. [FAQ](#-faq)
+
+</details>
 
 ---
 
-## Overview
+## 📦 Installation
 
-VPSH allows you to share your internet connection with other devices on your network. It's ideal for:
-- Sharing a VPN connection with other devices
-- Creating a secure proxy server on your phone
-- Managing and monitoring connected clients
-- Using distributed proxy workers via BatProxy
+```bash
+# 1. Download the APK from the official source
+# 2. Enable "Install from unknown sources" in Android settings
+# 3. Install the APK
+# 4. Grant notification permission when prompted (Android 13+)
+```
 
-The app requires **root access** for Full Mode (VPN NAT routing). Proxy mode works without root.
-
----
-
-## Installation
-
-1. Download the APK from the official source
-2. Enable "Install from unknown sources" in your Android settings
-3. Install the APK
-4. Grant notification permission when prompted (Android 13+)
+**Requirements:**
+- Android 7.0 (API 24) or higher
+- Internet connection
+- Root access (optional, for Full Mode only)
 
 ---
 
-## First Launch
-
-When you first open VPSH:
-1. The app will check for root access
-2. You'll see the Dashboard with status information
-3. The app is ready to start in **Proxy Mode** by default
-
----
-
-## Quick Start Guide
+## 🚀 Quick Start Guide
 
 ### Proxy Mode (No Root Required)
+
+```mermaid
+flowchart LR
+    A[Open VPSH] --> B[Tap START]
+    B --> C[Proxy runs on port 8888]
+    C --> D[Connect devices to<br>http://YOUR_IP:8888]
+```
+
 1. Open the app
 2. Ensure you're connected to the internet (Wi-Fi or mobile data)
 3. Tap **START** on the Dashboard
@@ -85,6 +149,15 @@ When you first open VPSH:
    - SOCKS5 (if enabled): `[your-phone-ip]:1080`
 
 ### Full Mode (Requires Root)
+
+```mermaid
+flowchart LR
+    A[Enable Root] --> B[Connect VPN]
+    B --> C[Select FULL mode]
+    C --> D[Tap START]
+    D --> E[All hotspot traffic<br>routes through VPN]
+```
+
 1. Enable root access
 2. Make sure your VPN is connected
 3. On the Dashboard, select **FULL** mode
@@ -93,95 +166,191 @@ When you first open VPSH:
 
 ---
 
-## Modes of Operation
+## ⚙️ Modes of Operation
 
 ### Proxy Mode
-- **Root required:** No
-- **How it works:** Runs an HTTP and/or SOCKS5 proxy server
-- **Use case:** Sharing internet with devices on the same network
-- **Features:**
-  - HTTP proxy on configurable port (default: 8888)
-  - Optional SOCKS5 proxy (default: 1080)
-  - Authentication support (username/password)
-  - Upstream proxy chaining
-  - Kill switch (stops proxy when VPN disconnects)
-  - Client blocking and bandwidth limiting
-- **Limitation:** Cannot share traffic from system-level VPNs (like Viva) because it cannot intercept traffic already routed to the VPN interface. [See FAQ for details](#faq---why-some-vpns-cant-be-shared-without-root).
 
-### Full Mode (VPN NAT)
-- **Root required:** Yes
-- **How it works:** Routes all traffic from your hotspot through the VPN using iptables
-- **Use case:** Sharing a VPN connection with multiple devices
-- **Features:**
-  - Full NAT routing through VPN interface
-  - IPv6 leak protection
-  - Client bandwidth limiting via tc (traffic control)
-  - Health monitoring and auto-restart
-- **Advantage:** Can share traffic from **any** VPN, including system-level apps like Viva, as it manipulates the network routing at the system level.
+<table>
+<tr>
+<td>
+
+| Property | Value |
+|----------|-------|
+| **Root required** | ❌ No |
+| **How it works** | Runs HTTP/SOCKS5 proxy server |
+| **Default HTTP port** | 8888 |
+| **Default SOCKS5 port** | 1080 |
+
+</td>
+<td>
+
+**Features:**
+- ✅ HTTP proxy on configurable port
+- ✅ Optional SOCKS5 proxy
+- ✅ Authentication (username/password)
+- ✅ Upstream proxy chaining
+- ✅ Kill switch
+- ✅ Client blocking & bandwidth limiting
+
+</td>
+</tr>
+</table>
+
+**Limitation:** Cannot share traffic from system-level VPNs (like Viva) because it cannot intercept traffic already routed to the VPN interface.
 
 ---
 
-## Main Dashboard
+### Full Mode (VPN NAT)
+
+<table>
+<tr>
+<td>
+
+| Property | Value |
+|----------|-------|
+| **Root required** | ✅ Yes |
+| **How it works** | Routes hotspot traffic through VPN using iptables |
+| **Use case** | Sharing VPN connection with multiple devices |
+
+</td>
+<td>
+
+**Features:**
+- ✅ Full NAT routing through VPN
+- ✅ IPv6 leak protection
+- ✅ Per-client bandwidth limiting (tc)
+- ✅ Health monitoring & auto-restart
+- ✅ Shares ANY VPN connection
+
+</td>
+</tr>
+</table>
+
+**Advantage:** Can share traffic from **any** VPN, including system-level apps like Viva, as it manipulates network routing at the system level.
+
+---
+
+## 📊 Main Dashboard
 
 ### Status & Controls
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Running-3DDC97?style=for-the-badge" alt="Status Running" />
+  <img src="https://img.shields.io/badge/Mode-FULL-5B8CFF?style=for-the-badge" alt="Mode Full" />
+  <img src="https://img.shields.io/badge/Root-Available-brightgreen?style=for-the-badge" alt="Root Available" />
+</p>
+
 - **Status indicator:** Shows current state (Stopped/Starting/Running/Paused/Error)
 - **Mode selector:** Switch between PROXY and FULL modes
 - **Start/Stop button:** Controls the service
 - **Interface info:** Shows detected hotspot and VPN interfaces
 
 ### Client Management
+
 When the service is running, connected clients appear in the list with:
-- **IP address** and MAC address
-- **Nickname** (customizable per device)
-- **Block/Unblock** toggle
-- **Bandwidth limit** setting (Kbps)
+
+```mermaid
+flowchart LR
+    Client[Connected Client] --> IP[IP Address]
+    Client --> MAC[MAC Address]
+    Client --> Nickname[Custom Nickname]
+    Client --> Block[Block/Unblock]
+    Client --> Limit[Bandwidth Limit]
+```
 
 **Client controls:**
-- Tap the **pencil icon** to rename a device
-- Tap the **clock icon** to set a bandwidth limit
-- Tap the **checkmark/block** icon to block or unblock a device
+- ✏️ Tap the **pencil icon** to rename a device
+- ⏱️ Tap the **clock icon** to set a bandwidth limit
+- 🔒 Tap the **checkmark/block** icon to block or unblock a device
 
 ### QR Code Sharing
+
 In Proxy Mode, tap the QR button to display a QR code containing:
+
 ```
 PROXY http://[username:password@][phone-ip]:[port]
 ```
+
 Scan this with another device to instantly configure proxy settings.
 
 ### Tethering Support
+
 The Dashboard includes a tethering helper section:
-- Detects Wi-Fi, USB, or Bluetooth tethering
-- USB tether enable button (root required)
-- Opens system tethering settings
-- Shows USB cable connection status
+- 📶 Detects Wi-Fi, USB, or Bluetooth tethering
+- 🔌 USB tether enable button (root required)
+- ⚙️ Opens system tethering settings
+- 📱 Shows USB cable connection status
 
 ---
 
-## BatProxy Tab
+## 🦇 BatProxy Tab
 
 ### What is BatProxy?
 
 BatProxy is an **enterprise-grade, intelligent proxy tunnel** that turns your Android device into a resilient gateway. Instead of relying on a single proxy server, it uses a pool of distributed "workers" – typically deployed as **Cloudflare Workers** – to route your traffic.
 
+```mermaid
+flowchart TB
+    subgraph Client[VPSH Android Client]
+        A[HTTP/SOCKS5<br>Proxy Server]
+    end
+    
+    subgraph Workers[Worker Pool]
+        B[Worker 1<br>wss://us-worker.workers.dev]
+        C[Worker 2<br>wss://eu-worker.workers.dev]
+        D[Worker 3<br>wss://asia-worker.workers.dev]
+    end
+    
+    subgraph Targets[Target Servers]
+        E[example.com]
+        F[api.github.com]
+        G[Target N]
+    end
+    
+    A -->|Intelligent Selection| B
+    A -->|Intelligent Selection| C
+    A -->|Intelligent Selection| D
+    B --> E
+    B --> F
+    C --> F
+    C --> G
+    D --> E
+    D --> G
+```
+
 The system intelligently:
-1. **Routes connections** through the healthiest, fastest available worker.
-2. **Monitors worker performance** using metrics like latency (RTT) and success rate via Exponentially Weighted Moving Averages (EWMA).
-3. **Automatically fails over** to other workers if one becomes slow or unresponsive.
-4. **Reopens connections** through workers that have recovered from failure, thanks to a circuit-breaker pattern with exponential backoff.
+1. 🎯 **Routes connections** through the healthiest, fastest available worker
+2. 📊 **Monitors worker performance** using EWMA (latency, success rate)
+3. 🔄 **Automatically fails over** to other workers if one becomes slow
+4. 🔁 **Reopens connections** through recovered workers (circuit breaker with exponential backoff)
+
+```mermaid
+flowchart LR
+    subgraph WorkerSelection[Worker Selection Algorithm]
+        S[Score Calculation] --> F1[Success Rate EWMA]
+        S --> F2[RTT EWMA]
+        S --> F3[Active Connections]
+        S --> F4[Cooldown Status]
+        S --> F5[Slow Streak Penalty]
+        F1 & F2 & F3 & F4 & F5 --> Final[Weighted Score]
+        Final --> Best[Select Best Worker]
+    end
+```
 
 For a complete technical deep-dive into the architecture, worker selection algorithms, and deployment, visit the official project repository:  
 👉 **[BatProxy on GitHub](https://github.com/batmanpriv/BatProxy)**
 
 **How it Works (Briefly):**
 
-1. **Workers** are servers (running on Cloudflare's edge network) that accept WebSocket connections.
-2. **The Android app (Client)** connects to these workers using a secure, HMAC-authenticated handshake.
-3. When you or a connected client makes a request, the app selects the optimal worker based on a real-time score.
-4. Data is relayed through the worker to the target server, with built-in optimizations like **data coalescing** to reduce overhead.
+1. **Workers** are servers (running on Cloudflare's edge network) that accept WebSocket connections
+2. **The Android app (Client)** connects to these workers using a secure, HMAC-authenticated handshake
+3. When you or a connected client makes a request, the app selects the optimal worker based on a real-time score
+4. Data is relayed through the worker to the target server, with built-in optimizations like **data coalescing** to reduce overhead
 
 This setup provides exceptional reliability, low latency through Cloudflare's global network, and automatic recovery from failures.
 
 ### Adding Workers
+
 1. Go to the **BatProxy** tab
 2. Tap the **+** button
 3. Enter worker URL and password (the same `PASSWD` you set on your Cloudflare Worker)
@@ -190,84 +359,110 @@ This setup provides exceptional reliability, low latency through Cloudflare's gl
 **Worker URL format:** `wss://your-worker-name.workers.dev` (Secure WebSocket)
 
 ### Worker Health & Stats
-Each worker displays:
-- **Status:**
-  - **Closed:** Healthy and available
-  - **Half-open:** Recovering from a failure, under probation
-  - **Open:** Failed, in a cooldown period (excluded from selection)
-- **Cooldown:** Time remaining before the worker can be retried
-- **RTT:** Average round-trip time in milliseconds
-- **Score:** A real-time performance score (higher is better)
-- **Active connections:** Current connections through this worker
-- **OK/Fail:** Success and failure counts
 
-**Health monitoring:**
-- Automatic health checks every 30 seconds
-- Exponential backoff for failed workers (cooldown doubles on each failure, up to 120s)
-- Success rate tracking with EWMA (Exponentially Weighted Moving Average)
-- Score-based worker selection, preferring healthy and fast workers
-- Circuit breaker pattern prevents cascading failures
+Each worker displays:
+
+| Status | Description |
+|--------|-------------|
+| 🟢 **Closed** | Healthy and available |
+| 🟡 **Half-open** | Recovering from a failure, under probation |
+| 🔴 **Open** | Failed, in a cooldown period (excluded from selection) |
+
+**Additional metrics:**
+- ⏱️ **Cooldown:** Time remaining before retry
+- 📡 **RTT:** Average round-trip time in milliseconds
+- 📈 **Score:** Real-time performance score (higher is better)
+- 🔗 **Active connections:** Current connections through this worker
+- ✅❌ **OK/Fail:** Success and failure counts
 
 ### DNS Configuration
+
 - Set custom DNS for DNS-over-proxy resolution
 - Default: `1.1.1.1:53`
 - DNS queries are sent through the BatProxy tunnel
 
 ---
 
-## Settings
+## ⚙️ Settings
 
 ### Port Configuration
-- **HTTP Proxy Port:** Default 8888
-- **Enable SOCKS5:** Toggle SOCKS5 proxy
-- **SOCKS5 Port:** Default 1080
+```
+┌─────────────────────────────────────┐
+│  HTTP Proxy Port:  [ 8888 ]         │
+│  Enable SOCKS5:    [✓]              │
+│  SOCKS5 Port:      [ 1080 ]         │
+└─────────────────────────────────────┘
+```
 
 ### Authentication
-- **Require Auth:** Enable username/password authentication
-- **Username:** Set proxy username
-- **Password:** Set proxy password
+```
+┌─────────────────────────────────────┐
+│  Require Auth:     [✓]              │
+│  Username:         [ admin ]        │
+│  Password:         [ •••••••• ]     │
+└─────────────────────────────────────┘
+```
 
 ### Upstream Proxy Chaining
-Chain VPSH through another proxy:
-- **None:** Direct connection
-- **SOCKS5:** Chain through a SOCKS5 proxy
-- **HTTP:** Chain through an HTTP proxy
 
-**Upstream settings:**
-- Address: IP or hostname of upstream proxy
-- Port: Upstream proxy port
-- Username/Password: Optional authentication
+Chain VPSH through another proxy:
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Upstream Type:  [ None ▼ ]  [ SOCKS5 ]  [ HTTP ]  │
+│  Address:        [ 192.168.1.100 ]                  │
+│  Port:           [ 1080 ]                          │
+│  Username:       [ optional ]                      │
+│  Password:       [ optional ]                      │
+└─────────────────────────────────────────────────────┘
+```
 
 ### Health Monitoring
-- **Auto Restart:** Automatically restart if the service fails
-- **Health Interval:** How often to check health (seconds)
-- **Kill Switch:** Pause proxy when VPN disconnects
+
+```
+┌─────────────────────────────────────┐
+│  Auto Restart:     [✓]              │
+│  Health Interval:  [ 25 ] seconds   │
+│  Kill Switch:      [✓]              │
+└─────────────────────────────────────┘
+```
 
 ### Full Mode Settings
-- **Force VPN Only:** Disconnect clients if VPN drops
-- **Block IPv6 Leak:** Block IPv6 traffic to prevent leaks
+
+```
+┌─────────────────────────────────────┐
+│  Force VPN Only:   [✓]              │
+│  Block IPv6 Leak:  [✓]              │
+└─────────────────────────────────────┘
+```
 
 ### Interface Overrides
-- **Hotspot Interface:** Force a specific interface (e.g., `wlan0`, `usb0`)
-- **VPN Interface:** Force a specific VPN interface (e.g., `tun0`)
+
+```
+┌─────────────────────────────────────┐
+│  Hotspot Interface: [ wlan0 ]       │
+│  VPN Interface:     [ tun0 ]        │
+└─────────────────────────────────────┘
+```
 
 ---
 
-## Logs & Health Checks
+## 📋 Logs & Health Checks
 
 The **Logs** tab shows:
-- Service start/stop events
-- Client connections
-- Errors and warnings
-- Health check results
+- 📝 Service start/stop events
+- 🔌 Client connections
+- ⚠️ Errors and warnings
+- 💚 Health check results
 
 **Health Check button:** Manually triggers a health check and logs the result.
 
 ---
 
-## Quick Settings Tile
+## 🔘 Quick Settings Tile
 
 Add VPSH to your Quick Settings panel for one-tap control:
+
 1. Swipe down twice to open Quick Settings
 2. Tap the edit/pencil icon
 3. Find "VPSH" and drag it to your active tiles
@@ -280,16 +475,13 @@ The tile shows:
 
 ---
 
-## Client Setup Guide
+## 🔌 Client Setup Guide
 
 ### Connecting via HTTP Proxy
 
 **Windows:**
 ```cmd
-# System-wide proxy settings
 netsh winhttp set proxy [phone-ip]:8888
-
-# Or use a specific app that supports HTTP proxy
 ```
 
 **Linux/macOS:**
@@ -299,16 +491,17 @@ export https_proxy=http://[phone-ip]:8888
 ```
 
 **Android (manual):**
+```
 Settings → Wi-Fi → Tap network → Proxy → Manual
-- Proxy hostname: [phone-ip]
-- Proxy port: 8888
+  Proxy hostname: [phone-ip]
+  Proxy port: 8888
+```
 
 ### Connecting via SOCKS5
 
 **Windows:**
 ```cmd
-# Set SOCKS5 proxy in applications that support it
-# e.g., Firefox: Settings → Network Settings → SOCKS5
+# Firefox: Settings → Network Settings → SOCKS5
 ```
 
 **Linux/macOS:**
@@ -318,26 +511,25 @@ export ALL_PROXY=socks5://[phone-ip]:1080
 
 ### Using the QR Code
 
-1. On your phone, open the VPSH Dashboard
-2. Ensure the service is running in Proxy Mode
-3. Tap the QR button
-4. Scan the QR code with another device:
-   - **Windows/Linux:** Use a QR scanner that can import proxy settings
-   - **Android:** Many proxy apps support QR import
-   - **Manual:** The QR code also shows the URL in plain text
+```mermaid
+flowchart LR
+    A[Start Proxy Mode] --> B[Tap QR Button]
+    B --> C[Scan with Other Device]
+    C --> D[Auto-Configure Proxy]
+```
 
 ### Using BatProxy Clients
 
 BatProxy workers are servers that connect to VPSH. To set up a worker:
 
 1. **On the worker server (Cloudflare):**
-   - Follow the deployment guide in the [BatProxy repository](https://github.com/batmanpriv/BatProxy).
-   - Deploy the `worker.js` code to Cloudflare Workers.
-   - Set the `PASSWD` environment variable.
+   - Follow the deployment guide in the [BatProxy repository](https://github.com/batmanpriv/BatProxy)
+   - Deploy the `worker.js` code to Cloudflare Workers
+   - Set the `PASSWD` environment variable
 
 2. **On your VPSH Android app:**
    - Go to BatProxy tab
-   - Add the worker URL (e.g., `wss://your-worker.workers.dev`) and the password
+   - Add the worker URL (e.g., `wss://your-worker.workers.dev`) and password
    - Start the BatProxy service
 
 3. **Connect clients:**
@@ -346,79 +538,101 @@ BatProxy workers are servers that connect to VPSH. To set up a worker:
 
 ---
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 ### Common Issues
 
 | Issue | Solution |
 |-------|----------|
-| Proxy not starting | Check if port is already in use. Change port in Settings. |
-| Clients can't connect | Verify you're on the same network. Check firewall settings. |
-| Full Mode not working | Ensure root is available. Check VPN is active. |
-| BatProxy workers failing | Verify worker URLs are correct. Check worker password matches. Check your internet connection. |
-| Permission errors | Grant all requested permissions (notifications, VPN). |
-| USB tether not working | Enable USB tethering in system settings first. |
+| ❌ Proxy not starting | Check if port is already in use. Change port in Settings. |
+| 🔌 Clients can't connect | Verify you're on the same network. Check firewall settings. |
+| 🔒 Full Mode not working | Ensure root is available. Check VPN is active. |
+| 🌐 BatProxy workers failing | Verify worker URLs are correct. Check worker password matches. Check internet connection. |
+| 🔑 Permission errors | Grant all requested permissions (notifications, VPN). |
+| 🔌 USB tether not working | Enable USB tethering in system settings first. |
 
 ### Logs
 Always check the **Logs** tab for detailed error messages when troubleshooting.
 
 ---
 
-## FAQ
+## ❓ FAQ
 
-**Q: Do I need root?**
-A: Only for Full Mode (VPN NAT routing). Proxy Mode works without root.
+<details>
+<summary><b>Do I need root?</b></summary>
+Only for Full Mode (VPN NAT routing). Proxy Mode works without root.
+</details>
 
-**Q: What's the difference between Proxy and Full mode?**
-A: Proxy mode runs a proxy server. Full mode routes all hotspot traffic through the VPN using system-level routing.
+<details>
+<summary><b>What's the difference between Proxy and Full mode?</b></summary>
+Proxy mode runs a proxy server. Full mode routes all hotspot traffic through the VPN using system-level routing.
+</details>
 
-**Q: Why can't I share certain VPNs (like Viva) using Proxy Mode without root?**
-A: This is a fundamental limitation of Android's networking architecture. Here's why:
+<details>
+<summary><b>Why can't I share certain VPNs (like Viva) using Proxy Mode without root?</b></summary>
+
+This is a fundamental limitation of Android's networking architecture:
 
 **1. VPNs Work at the System Level**
-- Most VPN apps (like Viva, ExpressVPN, NordVPN) create a **virtual network interface** (e.g., `tun0`).
-- They use Android's `VpnService` API to route **all** of the device's traffic through this interface.
-- This routing happens at the operating system level, **before** any user-space proxy server can intercept the traffic.
+- Most VPN apps create a **virtual network interface** (e.g., `tun0`)
+- They use Android's `VpnService` API to route **all** device traffic through this interface
+- This routing happens at the OS level, **before** any user-space proxy can intercept
 
 **2. Proxy Mode is a User-Space Application**
-- VPSH's Proxy Mode runs an HTTP/SOCKS5 proxy server. This is a regular app that listens for incoming connections.
-- It can only accept traffic that is **explicitly directed to it** by a client application (e.g., setting a proxy in a browser).
-- It **cannot** see or intercept traffic that the Android system has already routed to the VPN interface.
+- VPSH's Proxy Mode runs an HTTP/SOCKS5 proxy server
+- It can only accept traffic **explicitly directed to it** by a client app
+- It **cannot** see traffic already routed to the VPN interface
 
 **3. The "Chicken and Egg" Problem**
-- When you activate a VPN, the system directs all traffic to the VPN's virtual interface.
-- The VPN app then encrypts and forwards this traffic to its own server.
-- A proxy server running on the same device is "downstream" of this system-level decision. It only sees traffic that the system sends to it, but the system is sending everything to the VPN.
+- When you activate a VPN, the system directs all traffic to the VPN interface
+- The VPN app encrypts and forwards this traffic to its own server
+- A proxy running on the same device is "downstream" of this system-level decision
 
 **The Only Solution: Full Mode (Requires Root)**
-- VPSH's **Full Mode** overcomes this by using `iptables` (Linux firewall) and routing rules, which require **root access**.
-- With root, VPSH can manipulate the system's routing table and firewall to *force* all traffic (including from the VPN interface) through the NAT and out through the VPN, effectively sharing the VPN connection with other devices on your hotspot.
-
-**What You Can Share Without Root**
-- Only applications that support manual proxy configuration (like browsers, some download managers, or apps that respect system proxy settings) can use VPSH's Proxy Mode.
-- The proxy mode is perfect for sharing a standard internet connection or a web proxy, but it cannot forcibly redirect traffic from a system-wide VPN.
+- VPSH's **Full Mode** uses `iptables` and routing rules, requiring **root access**
+- With root, VPSH can manipulate the system's routing table and firewall to *force* all traffic through the VPN
+- This effectively shares the VPN connection with other devices on your hotspot
 
 **In summary:**
-- **Without root:** You can only share the internet connection for apps that **choose** to use your proxy.
-- **With root (Full Mode):** You can share **any** internet connection, including those from system-level VPNs like Viva, by forcing all traffic through the VPN.
+- **Without root:** You can only share the internet connection for apps that **choose** to use your proxy
+- **With root (Full Mode):** You can share **any** internet connection, including system-level VPNs like Viva
 
-**Q: How do I find my phone's IP address?**
-A: Look in the app's Dashboard under hotspot interface info, or check your Wi-Fi settings.
+</details>
 
-**Q: Can I run both HTTP and SOCKS5 simultaneously?**
-A: Yes, enable SOCKS5 in Settings and both will run on their respective ports.
+<details>
+<summary><b>How do I find my phone's IP address?</b></summary>
+Look in the app's Dashboard under hotspot interface info, or check your Wi-Fi settings.
+</details>
 
-**Q: How do I limit bandwidth per client?**
-A: On the Dashboard, tap the clock icon next to any client and set a limit in Kbps.
+<details>
+<summary><b>Can I run both HTTP and SOCKS5 simultaneously?</b></summary>
+Yes, enable SOCKS5 in Settings and both will run on their respective ports.
+</details>
 
-**Q: What does BatProxy do?**
-A: BatProxy routes traffic through a pool of distributed workers (like Cloudflare Workers), automatically selecting the healthiest one for each request. This provides high reliability and performance.
+<details>
+<summary><b>How do I limit bandwidth per client?</b></summary>
+On the Dashboard, tap the clock icon next to any client and set a limit in Kbps.
+</details>
 
-**Q: Why are my workers showing "half_open" status?**
-A: A worker is in half-open state if it failed but is being retried. It will either recover (closed) or fail completely (open) and enter a cooldown period.
+<details>
+<summary><b>What does BatProxy do?</b></summary>
+BatProxy routes traffic through a pool of distributed workers (like Cloudflare Workers), automatically selecting the healthiest one for each request. This provides high reliability and performance.
+</details>
 
-**Q: How does the health monitor work?**
-A: It periodically checks if the service is healthy. If it fails, it attempts to restart up to 5 times before giving up. For BatProxy, it also performs health checks on each worker.
+<details>
+<summary><b>Why are my workers showing "half_open" status?</b></summary>
+A worker is in half-open state if it failed but is being retried. It will either recover (closed) or fail completely (open) and enter a cooldown period.
+</details>
 
-**Q: Can I use my own BatProxy workers?**
-A: Yes! You can deploy the BatProxy worker code (available on [GitHub](https://github.com/batmanpriv/BatProxy)) to Cloudflare Workers or any compatible WebSocket server and add the URL to the VPSH app.
+<details>
+<summary><b>How does the health monitor work?</b></summary>
+It periodically checks if the service is healthy. If it fails, it attempts to restart up to 5 times before giving up. For BatProxy, it also performs health checks on each worker.
+</details>
+
+<details>
+<summary><b>Can I use my own BatProxy workers?</b></summary>
+Yes! You can deploy the BatProxy worker code (available on <a href="https://github.com/batmanpriv/BatProxy">GitHub</a>) to Cloudflare Workers or any compatible WebSocket server and add the URL to the VPSH app.
+</details>
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com/)
+
+</div>
