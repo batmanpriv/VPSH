@@ -1,6 +1,8 @@
-# 🦇 VPSH - Virtual Private Share Hub
+# 🦇 VPSH - VPN Proxy Share Hotspot
 
 **Version 3.1.0**
+
+> **VPSH** stands for **VPN Proxy Share Hotspot** – your all-in-one solution for sharing internet connectivity from your Android device.
 
 <p align="center">
   <img width="1536" height="1024" alt="VPSH Dashboard" src="https://github.com/user-attachments/assets/01284663-e8da-42e0-8ef7-02c993999c69" />
@@ -23,7 +25,7 @@
 
 ## 📖 Overview
 
-VPSH is an Android application that transforms your device into a versatile network gateway. Whether you need to share a VPN connection, create a secure proxy server, or build a distributed proxy network with Cloudflare Workers, VPSH has you covered.
+**VPSH (VPN Proxy Share Hotspot)** is an Android application that transforms your device into a versatile network gateway. Whether you need to share a VPN connection, create a secure proxy server, or build a distributed proxy network with Cloudflare Workers, VPSH has you covered.
 
 **Key capabilities:**
 - 🔄 Share internet connection with other devices
@@ -518,6 +520,51 @@ flowchart LR
     C --> D[Auto-Configure Proxy]
 ```
 
+### Automated Client Setup Scripts
+
+For quick and easy proxy configuration on your desktop, VPSH provides automated scripts for both Windows and Linux:
+
+| Platform | Script | Description |
+|----------|--------|-------------|
+| 🪟 **Windows** | [`client-windows.bat`](https://github.com/batmanpriv/VPSH/releases/download/3.1.0/client-windows.bat) | Interactive and command-line proxy manager for Windows |
+| 🐧 **Linux** | [`client-linux.sh`](https://github.com/batmanpriv/VPSH/releases/download/3.1.0/client-linux.sh) | Interactive and command-line proxy manager for Linux |
+
+**Windows Usage:**
+```cmd
+# Interactive mode (double-click or run without arguments)
+client-windows.bat
+
+# Command-line mode
+client-windows.bat connect 192.168.1.100 8888
+client-windows.bat connect 10.0.0.1 1080 myuser mypass
+client-windows.bat disconnect
+client-windows.bat status
+client-windows.bat test
+```
+
+**Linux Usage:**
+```bash
+# Make executable
+chmod +x client-linux.sh
+
+# Interactive mode
+./client-linux.sh
+
+# Command-line mode
+./client-linux.sh connect 192.168.1.100 8888
+./client-linux.sh connect 10.0.0.1 1080 myuser mypass
+./client-linux.sh disconnect
+./client-linux.sh status
+./client-linux.sh test
+```
+
+**What these scripts do:**
+- 🔧 Configure system proxy settings
+- 🌐 Set HTTP_PROXY and HTTPS_PROXY environment variables
+- ✅ Test connection through the proxy
+- 📊 Display current proxy status
+- 🔄 One-command disconnect
+
 ### Using BatProxy Clients
 
 BatProxy workers are servers that connect to VPSH. To set up a worker:
@@ -632,6 +679,11 @@ It periodically checks if the service is healthy. If it fails, it attempts to re
 <details>
 <summary><b>Can I use my own BatProxy workers?</b></summary>
 Yes! You can deploy the BatProxy worker code (available on <a href="https://github.com/batmanpriv/BatProxy">GitHub</a>) to Cloudflare Workers or any compatible WebSocket server and add the URL to the VPSH app.
+</details>
+
+<details>
+<summary><b>What are the client scripts for?</b></summary>
+The `client-windows.bat` and `client-linux.sh` scripts automatically configure your desktop's proxy settings to connect to VPSH. They support interactive and command-line modes for easy connection management.
 </details>
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com/)
 
