@@ -9,7 +9,7 @@
 > **VPSH** مخفف **VPN Proxy Share Hotspot** هستش. یعنی با این برنامه می‌تونی اینترنت موبایل یا VPN رو با دستگاه‌های دیگه به اشتراک بذاری.
 
 <p align="center">
-  <img width="1536" height="1024" alt="VPSH Dashboard" src="https://github.com/user-attachments/assets/01284663-e8da-42e0-8ef7-02c993999c69" />
+  <img width="1536" height="1024" alt="VPSH Dashboard" src="https://github.com/user-attachments/assets/757ae35e-0dca-4d0d-93a7-e419c66f8993" />
 </p>
 
 ---
