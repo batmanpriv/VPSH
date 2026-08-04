@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="README.md">English</a> | 
-  <a href="readmafa.md">فارسی</a> | 
+  <a href="readmefa.md">فارسی</a> | 
 </p>
 
 **Version 3.1.0**
