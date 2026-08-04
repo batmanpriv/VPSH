@@ -690,6 +690,4 @@ Yes! You can deploy the BatProxy worker code (available on <a href="https://gith
 <summary><b>What are the client scripts for?</b></summary>
 The `client-windows.bat` and `client-linux.sh` scripts automatically configure your desktop's proxy settings to connect to VPSH. They support interactive and command-line modes for easy connection management.
 </details>
-[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com/)
-
 </div>
