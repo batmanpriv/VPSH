@@ -1,5 +1,10 @@
 # 🦇 VPSH - VPN Proxy Share Hotspot
 
+<p align="center">
+  <a href="README.md">English</a> | 
+  <a href="readmafa.md">فارسی</a> | 
+</p>
+
 **Version 3.1.0**
 
 > **VPSH** stands for **VPN Proxy Share Hotspot** – your all-in-one solution for sharing internet connectivity from your Android device.
