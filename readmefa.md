@@ -538,20 +538,3 @@ client-windows.bat test
 
 **میتونم از کارگرهای BatProxy خودم استفاده کنم؟**
 بله! کدش تو گیت‌هاب هست، میتونی روی Cloudflare Workers یا هر سرور WebSocket دیگه‌ای اجراش کنی.
-
----
-
-## مجوز
-
-این پروژه تحت مجوز MIT منتشر شده.
-
----
-
-<div align="center">
-
-**ساخته شده با ❤️ توسط BatmanPriv**
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/batmanpriv)
-[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/BatmanPriv)
-
-</div>
