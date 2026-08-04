@@ -33,9 +33,9 @@ private const val TELEGRAM_URL = "https://t.me/BatmanPriv"
 private const val APP_VERSION = "3.1.0"
 
 private const val CLIENT_WINDOWS_URL =
-    "https://github.com/batmanpriv/VPSH/releases/download/v3.1.0/client-windows.bat"
+    "https://github.com/batmanpriv/VPSH/releases/download/3.1.0/client-windows.bat"
 private const val CLIENT_LINUX_URL =
-    "https://github.com/batmanpriv/VPSH/releases/download/v3.1.0/client-linux.sh"
+    "https://github.com/batmanpriv/VPSH/releases/download/3.1.0/client-linux.sh"
 
 @Composable
 fun AboutScreen() {
