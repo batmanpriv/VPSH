@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VPSH</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_dashboard">داشبورد</string>
+    <string name="nav_settings">تنظیمات</string>
+    <string name="nav_logs">گزارش‌ها</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">VPSH</string>
+    <string name="dashboard_subtitle">وی‌پی‌اِنت رو با بقیه‌ی دستگاه‌ها به اشتراک بذار</string>
+
+    <string name="status_running">فعاله</string>
+    <string name="status_starting">داره روشن می‌شه…</string>
+    <string name="status_paused_killswitch">موقتاً متوقف شده (Kill-switch)</string>
+    <string name="status_error">یه خطایی پیش اومده</string>
+    <string name="status_stopped">خاموشه</string>
+    <string name="public_ip_detecting">در حال بررسی آی‌پی…</string>
+    <string name="public_ip_line">آی‌پی: %1$s   %2$s %3$s</string>
+
+    <string name="mode_label_full">حالت کامل (NAT، با روت)</string>
+    <string name="mode_label_proxy">حالت پراکسی</string>
+
+    <string name="iface_summary">رابط: %1$s (%2$s)</string>
+    <string name="iface_summary_with_vpn">رابط: %1$s (%2$s)  ←  VPN: %3$s</string>
+
+    <string name="share_mode_title">حالت اشتراک‌گذاری</string>
+    <string name="mode_proxy">پراکسی</string>
+    <string name="mode_proxy_sub">بدون نیاز به روت</string>
+    <string name="mode_full">کامل</string>
+    <string name="mode_full_sub_rooted">روت داری، آماده‌ای</string>
+    <string name="mode_full_sub_needed">روت لازم داره</string>
+
+    <string name="btn_start">بزن بریم</string>
+    <string name="btn_stop">توقف اشتراک</string>
+
+    <string name="stat_clients">کلاینت‌ها</string>
+    <string name="stat_traffic">ترافیک</string>
+    <string name="stat_port">پورت</string>
+
+    <string name="connected_devices">دستگاه‌های وصل‌شده</string>
+    <string name="no_devices_yet">هنوز کسی وصل نشده</string>
+    <string name="blocked_devices_title">دستگاه‌های بن‌شده</string>
+    <string name="no_blocked_devices">هیچ دستگاهی بن نشده</string>
+    <string name="nav_hotspot">هات‌اسپات</string>
+    <string name="hotspot_subtitle">کنترل دسترسی سخت، در سطح خود هات‌اسپات — دستگاه رو با آدرس MAC وای‌فای/USB‌ش بن می‌کنه، طوری که اصلاً از طریق هات‌اسپات به هیچ‌جا دسترسی نداره (نه فقط پراکسی اشتراک). نیاز به روت داره.</string>
+    <string name="hotspot_active_label">هات‌اسپات فعاله</string>
+    <string name="hotspot_inactive_label">هات‌اسپاتی پیدا نشد</string>
+    <string name="hotspot_root_required">بن کردن از خود هات‌اسپات نیاز به روت داره (Magisk یا مشابه). بدون روت، هنوز می‌تونی از بلاک سطح پراکسی توی داشبورد استفاده کنی.</string>
+    <string name="hotspot_devices_title">دستگاه‌های روی هات‌اسپات</string>
+    <string name="hotspot_no_devices">در حال حاضر دستگاهی روی هات‌اسپات دیده نمی‌شه</string>
+    <string name="hotspot_no_hotspot_detected">هات‌اسپات وای‌فای یا اشتراک USB رو روشن کن تا دستگاه‌های وصل‌شده اینجا دیده بشن</string>
+    <string name="hotspot_banned_title">بن‌شده از هات‌اسپات</string>
+    <string name="hotspot_no_banned">هیچ دستگاهی بن نشده</string>
+    <string name="hotspot_ban_action">بن از هات‌اسپات</string>
+    <string name="hotspot_unban_action">رفع بن</string>
+    <string name="rename_device_action">تغییر نام</string>
+    <string name="block_device_action">بلاک کن</string>
+    <string name="unblock_device_action">رفع بلاک</string>
+    <string name="limit_device_action">محدود کردن سرعت</string>
+
+    <string name="quick_connect_title">اتصال سریع</string>
+    <string name="quick_connect_hint">همین آدرس رو تو تنظیمات پراکسی دستگاه دیگه وارد کن</string>
+    <string name="quick_connect_user">کاربر: %1$s</string>
+    <string name="quick_connect_tab_manual">دستی</string>
+    <string name="quick_connect_tab_pac">خودکار (هر سیستم‌عامل)</string>
+    <string name="pac_hint">تو ویندوز/مک/لینوکس این لینک رو به‌عنوان «آدرس تنظیم خودکار پراکسی» (Automatic proxy configuration URL) تو تنظیمات شبکه بذار. همه‌ی اپ‌های اون دستگاه خودکار از پراکسی استفاده می‌کنن، بدون نیاز به تنظیم دستی هر برنامه.</string>
+    <string name="pac_disabled_hint">تنظیم خودکار پراکسی (PAC) خاموشه. از تنظیمات روشنش کن تا یه لینک آماده برای هر سیستم‌عاملی بگیری.</string>
+    <string name="close">بستن</string>
+
+    <string name="rename_dialog_title">اسم دستگاه رو عوض کن (%1$s)</string>
+    <string name="rename_dialog_label">اسم دلخواه</string>
+    <string name="limit_dialog_title">محدودیت سرعت (%1$s)</string>
+    <string name="limit_dialog_label">حداکثر سرعت، kbit/s (۰ یعنی نامحدود)</string>
+    <string name="limit_dialog_presets_hint">پیش‌فرض‌ها</string>
+    <string name="limit_preset_unlimited">نامحدود</string>
+    <string name="limit_active_label">محدود به %1$d kbit/s</string>
+    <string name="save">ذخیره</string>
+    <string name="cancel">بی‌خیال</string>
+
+    <!-- Settings -->
+    <string name="settings_title">تنظیمات</string>
+
+    <string name="ports_section">پورت‌ها</string>
+    <string name="http_proxy_port">پورت پراکسی HTTP</string>
+    <string name="enable_socks5">SOCKS5 رو هم روشن کن</string>
+    <string name="socks5_port">پورت SOCKS5</string>
+    <string name="enable_pac">تنظیم خودکار پراکسی (PAC) برای هر سیستم‌عامل</string>
+    <string name="enable_pac_hint">با یه لینک، ویندوز/مک/لینوکس و بقیه دستگاه‌ها خودکار پراکسی رو اعمال می‌کنن — بدون تنظیم دستی هر اپ.</string>
+    <string name="pac_port">پورت سرور PAC</string>
+
+    <string name="auth_section">احراز هویت</string>
+    <string name="require_auth">نام‌کاربری و رمز بخواد</string>
+    <string name="username">نام کاربری</string>
+    <string name="password">رمز عبور</string>
+
+    <string name="chain_section">زنجیره‌کردن از طریق یه پراکسی دیگه</string>
+    <string name="chain_desc">برای VLESS/VMess/Shadowsocks: تو اپ کلاینتت حالت «فقط پراکسی محلی» رو روشن کن و پورت SOCKS5/HTTP محلیش رو همین‌جا بزن. کانفیگ‌های خام SOCKS4/SOCKS5/HTTP رو هم می‌تونی مستقیم همین‌جا وارد کنی.</string>
+    <string name="chain_off">خاموش</string>
+    <string name="chain_socks5">SOCKS5</string>
+    <string name="chain_http">HTTP</string>
+    <string name="upstream_address">آدرس (معمولاً 127.0.0.1)</string>
+    <string name="upstream_port">پورت</string>
+    <string name="upstream_username_optional">نام کاربری (اختیاری)</string>
+    <string name="upstream_password_optional">رمز عبور (اختیاری)</string>
+    <string name="upstream_profiles_title">پروفایل‌های ذخیره‌شده</string>
+    <string name="upstream_profiles_hint">تنظیمات بالا رو با یه اسم ذخیره کن، بعد با یه لمس بینشون سوییچ کن.</string>
+    <string name="upstream_profiles_none">هنوز پروفایلی ذخیره نشده.</string>
+    <string name="upstream_profile_apply">استفاده</string>
+    <string name="upstream_profile_delete">حذف</string>
+    <string name="upstream_profile_name_hint">اسم پروفایل</string>
+    <string name="upstream_profile_save">ذخیره‌ی فعلی</string>
+
+    <string name="health_section">پایداری و سلامت</string>
+    <string name="auto_restart">اگه قطع شد، خودش دوباره راه بیفته</string>
+    <string name="health_interval_seconds">هر چند ثانیه سلامتش رو چک کنه</string>
+    <string name="kill_switch_desc">Kill-switch: اگه VPN قطع شد، پراکسی هم متوقف بشه</string>
+
+    <string name="full_mode_section">حالت کامل (روت)</string>
+    <string name="disconnect_clients_on_vpn_drop">اگه VPN قطع شد، کلاینت‌ها رو هم قطع کن</string>
+    <string name="block_ipv6_leak">جلوی نشت IPv6 رو بگیر</string>
+
+    <string name="iface_override_section">بازنویسی رابط شبکه (اختیاری)</string>
+    <string name="hotspot_iface_override">رابط هات‌اسپات (مثلاً wlan0)</string>
+    <string name="vpn_iface_override">رابط VPN (مثلاً tun0)</string>
+
+    <!-- Logs -->
+    <string name="logs_title">گزارش‌ها</string>
+    <string name="health_check_button">بررسی سلامت</string>
+    <string name="no_logs_yet">هنوز گزارشی ثبت نشده</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">VPSH — اشتراک VPN</string>
+    <string name="notif_channel_desc">وضعیت اشتراک‌گذاری VPN / پراکسی</string>
+    <string name="notif_preparing">داره آماده می‌شه…</string>
+    <string name="notif_full_running">در حال اشتراک VPN (%1$s → %2$s)</string>
+    <string name="notif_proxy_running">پراکسی فعاله روی پورت %1$d</string>
+    <string name="notif_paused_vpn_down">موقتاً متوقف — VPN قطعه</string>
+    <string name="notif_stopped">متوقف شد</string>
+    <string name="notif_error">خطا: %1$s</string>
+    <string name="notif_action_stop">توقف</string>
+    <string name="notif_action_close">بستن</string>
+
+    <!-- Service log lines -->
+    <string name="log_start_mode">شروع در حالت %1$s</string>
+    <string name="mode_word_full">کامل (روت)</string>
+    <string name="mode_word_proxy">پراکسی</string>
+    <string name="log_nat_established">NAT روی %1$s → %2$s برقرار شد</string>
+    <string name="log_health_ok">بررسی سلامت: همه‌چی مرتبه</string>
+    <string name="log_health_fail">بررسی سلامت: یه مشکلی پیدا شد</string>
+    <string name="log_killswitch_paused">Kill-switch: VPN قطع شد — پراکسی موقتاً متوقف شد</string>
+    <string name="log_killswitch_resumed">Kill-switch: VPN دوباره وصل شد — پراکسی از سر گرفته شد</string>
+    <string name="log_service_stopped">سرویس متوقف شد</string>
+    <string name="log_error_prefix">خطا: %1$s</string>
+    <string name="log_http_started">پراکسی HTTP روی پورت %1$d فعال شد</string>
+    <string name="log_socks5_started">پراکسی SOCKS5 روی پورت %1$d فعال شد</string>
+    <string name="log_socks5_failed">هشدار: SOCKS5 راه نیفتاد، با HTTP proxy ادامه می‌دیم</string>
+    <string name="log_pac_started">سرور تنظیم خودکار پراکسی (PAC) راه افتاد: %1$s</string>
+    <string name="log_pac_failed">هشدار: سرور PAC راه نیفتاد (شاید پورت مشغوله)</string>
+    <string name="log_guest_created">لینک مهمان ساخته شد: %1$s</string>
+    <string name="quick_connect_tab_guest">لینک مهمان</string>
+    <string name="guest_create_title">ساخت لینک مهمان</string>
+    <string name="guest_ttl_label">انقضا بعد از (دقیقه)</string>
+    <string name="guest_quota_label">سقف حجم (مگابایت، ۰ = نامحدود)</string>
+    <string name="guest_create_button">ساخت لینک مهمان</string>
+    <string name="guest_active_title">لینک‌های مهمان فعال</string>
+    <string name="guest_none">هنوز لینک مهمانی نساختی.</string>
+    <string name="guest_expires_in">%1$d دقیقه دیگه منقضی می‌شه</string>
+    <string name="guest_expired">منقضی شده</string>
+    <string name="guest_quota_unlimited">حجم نامحدود</string>
+    <string name="guest_quota_label_short">سقف %1$d مگابایت</string>
+    <string name="guest_revoke">لغو</string>
+    <string name="guest_credentials">یوزر: %1$s   پس: %2$s</string>
+    <string name="auto_start_boot">شروع خودکار بعد از روشن شدن گوشی</string>
+    <string name="auto_start_boot_hint">اگه موقع خاموش شدن گوشی سرویس روشن بوده، بعد از روشن شدن دوباره (وقتی هاتاسپات/روت در دسترس باشه) خودکار وصل می‌شه. پیش‌فرض خاموشه.</string>
+    <string name="game_mode">حالت بازی (فقط حالت Full)</string>
+    <string name="game_mode_hint">ترافیک بلادرنگ (بازی، تماس صوتی/تصویری) رو نسبت به دانلودهای حجیم روی دستگاه‌های وصل‌شده اولویت می‌ده، تا دانلود سنگین یه دستگاه باعث لگ بازی دستگاه دیگه نشه.</string>
+    <string name="log_game_mode_on">حالت بازی فعال شد — ترافیک بلادرنگ الان اولویت داره</string>
+    <string name="log_game_mode_failed">هشدار: حالت بازی اعمال نشد (شاید tc روی این دستگاه نیست)</string>
+
+    <!-- Status / error messages -->
+    <string name="status_full_running">اشتراک کامل VPN فعاله — کلاینت‌ها نیازی به هیچ تنظیمی ندارن</string>
+    <string name="status_proxy_running">پراکسی فعاله — رو دستگاه‌های دیگه Proxy رو بذار روی IP %1$s پورت %2$d%3$s</string>
+    <string name="status_proxy_chain_note"> — زنجیره‌شده از طریق %1$s روی %2$s:%3$d</string>
+    <string name="status_paused_vpn_down">موقتاً متوقف (Kill-switch): VPN قطعه</string>
+
+    <string name="err_root_required_toast">حالت کامل روی این گوشی به روت نیاز داره</string>
+    <string name="err_no_hotspot">رابط هات‌اسپات/تترینگ پیدا نشد. یه هات‌اسپات یا یواس‌بی تترینگ روشن کن.</string>
+    <string name="err_no_root">دسترسی روت داده نشد. حالت کامل بدون روت کار نمی‌کنه.</string>
+    <string name="err_no_vpn">هیچ تونل VPN فعالی پیدا نشد. اول یه VPN وصل کن.</string>
+    <string name="err_nat_failed">راه‌اندازی قوانین NAT (iptables) جواب نداد.</string>
+    <string name="err_routing_failed">مسیردهی ترافیک هات‌اسپات از داخل تونل VPN جواب نداد (ip route/rule).</string>
+    <string name="err_http_port_busy">راه‌اندازی پراکسی HTTP روی پورت %1$d جواب نداد (شاید پورت اشغاله؟)</string>
+    <string name="err_gave_up">بعد از چندتا تلاش ناموفق، سرویس متوقف شد.</string>
+
+    <!-- Quick Settings Tile -->
+    <string name="tile_active">فعال</string>
+    <string name="tile_starting">داره شروع می‌شه…</string>
+    <string name="tile_paused">موقتاً متوقف</string>
+    <string name="tile_error">خطا</string>
+    <string name="tile_stopped">متوقف</string>
+
+    <!-- Language switcher -->
+    <string name="language_section">زبان</string>
+    <string name="language_system">پیش‌فرض سیستم</string>
+    <string name="language_english">English</string>
+    <string name="language_persian">فارسی</string>
+
+    <!-- BatProxy tab -->
+    <string name="batproxy_tab_title">BatProxy</string>
+    <string name="batproxy_subtitle">کل اتصالت رو از طریق Cloudflare Workers تانل کن</string>
+    <string name="batproxy_start">وصل شو</string>
+    <string name="batproxy_stop">قطع کن</string>
+    <string name="batproxy_status_connected">وصله</string>
+    <string name="batproxy_region_detecting">در حال تشخیص کشور خروجی…</string>
+    <string name="batproxy_status_connecting">داره وصل می‌شه…</string>
+    <string name="batproxy_status_disconnected">قطعه</string>
+    <string name="batproxy_stat_active">فعال</string>
+    <string name="batproxy_stat_total">کل</string>
+    <string name="batproxy_stat_ok">موفق</string>
+    <string name="batproxy_stat_fail">ناموفق</string>
+    <string name="batproxy_workers_title">ورکرها</string>
+    <string name="batproxy_no_workers">هنوز هیچ ورکری اضافه نکردی</string>
+    <string name="batproxy_add_worker">اضافه کردن ورکر</string>
+    <string name="batproxy_worker_url">آدرس ورکر (wss://…)</string>
+    <string name="batproxy_worker_password">رمز</string>
+    <string name="batproxy_remove_worker">حذف</string>
+    <string name="batproxy_dns_title">DNS Resolver</string>
+    <string name="batproxy_dns_host">آدرس</string>
+    <string name="batproxy_dns_port">پورت</string>
+
+    <string name="split_tunnel_title">تونل تفکیکی (Split Tunneling)</string>
+    <string name="split_tunnel_hint">مشخص کن کدوم اپ‌های همین گوشی از تونل رد بشن. مثلاً می‌تونی اپ بانک رو رو اینترنت عادی نگه‌داری و بقیه رو از BatProxy رد کنی.</string>
+    <string name="split_tunnel_off">خاموش — همه از تونل رد می‌شن</string>
+    <string name="split_tunnel_exclude">اپ‌های انتخابی از تونل خارج بشن</string>
+    <string name="split_tunnel_include_only">فقط اپ‌های انتخابی از تونل رد بشن</string>
+    <string name="split_tunnel_pick_apps">انتخاب اپ‌ها (%1$d تا انتخاب شده)</string>
+    <string name="split_tunnel_pick_apps_title">انتخاب اپ‌ها</string>
+    <string name="batproxy_worker_status_closed">سالمه</string>
+    <string name="batproxy_worker_status_half_open">داره برمی‌گرده</string>
+    <string name="batproxy_worker_status_open">استراحت می‌کنه</string>
+    <string name="batproxy_rtt_label">%1$dms</string>
+    <string name="batproxy_cooldown_label">%1$d ثانیه مونده</string>
+    <string name="batproxy_err_no_workers">اول حداقل یه ورکر اضافه کن</string>
+    <string name="batproxy_err_vpn_setup">راه‌اندازی تونل VPN جواب نداد</string>
+    <string name="batproxy_notif_channel_name">BatProxy — وضعیت تونل</string>
+    <string name="batproxy_notif_channel_desc">وضعیت تونل VPN مربوط به BatProxy</string>
+    <string name="batproxy_notif_connecting">داره وصل می‌شه…</string>
+    <string name="batproxy_notif_connected">تونل فعاله</string>
+    <string name="batproxy_notif_stopped">قطع شد</string>
+    <string name="batproxy_notif_error">خطا: %1$s</string>
+    <string name="batproxy_vpn_permission_denied">دسترسی VPN داده نشد</string>
+    <string name="batproxy_limitations_note">فقط ترافیک TCP از این تونل رد می‌شه (وب، اپ‌ها، TLS) — پروتکل‌های UDP مثل بازی‌ها یا تماس‌های ویدیویی که از QUIC/HTTP3 استفاده می‌کنن، فعلاً از این مسیر رد نمی‌شن.</string>
+
+    <!-- About tab -->
+    <string name="nav_about">درباره</string>
+    <string name="about_app_title">VPSH</string>
+    <string name="about_version">نسخه %1$s</string>
+    <string name="about_description">VPSH اینترنت گوشیت رو از طریق USB Tethering یا هات‌اسپات وای‌فای با بقیه‌ی دستگاه‌ها به اشتراک می‌ذاره — یا به‌صورت اشتراک کامل و شفاف VPN (با روت)، یا به‌صورت پراکسی محلی (بدون نیاز به روت). BatProxy یه راه دوم و جداست برای وصل‌شدن به اینترنت: ترافیک خودِ گوشی رو از طریق Cloudflare Workers تانل می‌کنه، برای وقتی که اتصال معمولیت فیلتر یا ناپایداره.</string>
+
+    <string name="about_features_title">چی داخلشه</string>
+    <string name="about_feature_proxy">حالت پراکسی — اشتراک VPN با بقیه‌ی دستگاه‌ها، بدون نیاز به روت</string>
+    <string name="about_feature_full">حالت کامل — اشتراک شفاف NAT برای گوشی‌های روت‌شده</string>
+    <string name="about_feature_batproxy">BatProxy — کل گوشی رو از طریق Cloudflare Workers تانل می‌کنه، خودش به‌عنوان VPN عمل می‌کنه</string>
+    <string name="about_feature_bilingual">کاملاً دوزبانه — انگلیسی و فارسی، هر وقت خواستی از تنظیمات عوضش کن</string>
+    <string name="about_feature_killswitch">Kill-switch، بررسی سلامت، و ری‌استارت خودکار تا اگه VPN قطع شد، چیزی بی‌سروصدا لو نره</string>
+
+    <!-- About: راهنمای تب‌ها -->
+    <string name="about_guide_title">هر تب چیکار می‌کنه</string>
+    <string name="about_guide_dashboard_title">داشبورد</string>
+    <string name="about_guide_dashboard_desc">صفحه‌ی اصلی. «حالت اشتراک» بین Proxy و Full سوییچ می‌کنه (Full بدون روت غیرفعاله). «شروع اشتراک / توقف» سرویس Foreground رو روشن یا خاموش می‌کنه — با روشن شدن، یه نوتیفیکیشن دائمی با دکمه‌ی Stop خودش ظاهر می‌شه تا نیازی به باز کردن دوباره‌ی اپ نباشه. پایین‌تر، آی‌پی عمومی فعلی و کشور/پرچم خروجی نشون داده می‌شه و هر ۵ ثانیه یک‌بار به‌روزرسانی می‌شه. دکمه‌ی QR کنار Start، آی‌پی گوشی، پورت‌های HTTP/SOCKS5 و اطلاعات ورود (اگه احراز هویت روشن باشه) رو به‌صورت یه کد قابل اسکن نشون می‌ده. کارت‌های آمار تعداد کلاینت‌ها و ترافیک رو نشون می‌دن و لیست دستگاه‌ها امکان تغییر نام، محدود کردن سرعت، یا بلاک هر کلاینت رو می‌ده. دستگاه بلاک‌شده فوراً قطع می‌شه و از لیست دستگاه‌های وصل‌شده حذف می‌شه، اما توی بخش جدای «دستگاه‌های بن‌شده» پایین همون صفحه با دکمه‌ی رفع بلاک باقی می‌مونه — یعنی همیشه می‌شه بعداً، حتی وقتی دیگه وصل نیست، رفع بلاکش کرد.</string>
+    <string name="about_guide_hotspot_title">هات‌اسپات</string>
+    <string name="about_guide_hotspot_desc">یه تب جداگانه برای خود هات‌اسپات، جدا از اشتراک‌گذاری. بلاک توی داشبورد فقط پراکسی اشتراک رو رد می‌کنه — دستگاه بلاک‌شده هنوز می‌تونه به هات‌اسپات وصل بشه و به چیزهای دیگه‌ی روش دسترسی داشته باشه. این تب به‌جاش با آدرس MAC، دقیقاً روی خود اینترفیس هات‌اسپات بن می‌کنه، طوری که دستگاه بن‌شده اصلاً از طریق هات‌اسپات به هیچ‌جا نمی‌رسه — چه توی حالت Proxy، چه Full، حتی وقتی اشتراک‌گذاری هم خاموشه. همه‌ی دستگاه‌های فعلاً روی هات‌اسپات (از جدول neighbor سیستم) با دکمه‌ی بن نشون داده می‌شن، و یه لیست جدای «بن‌شده از هات‌اسپات» با دکمه‌ی رفع بن هست، تا بن‌های قبلی حتی بعد از قطع شدن دستگاه هم قابل مدیریت بمونن. نیاز به روت داره.</string>
+    <string name="about_guide_batproxy_title">BatProxy</string>
+    <string name="about_guide_batproxy_desc">اتصال / قطع، تونل Cloudflare Workers رو روشن یا خاموش می‌کنه. لیست ورکرها جایی‌ست که آدرس و رمز هر ورکر رو اضافه یا حذف می‌کنی؛ تغییرش وقتی وصلی نیاز به وصل مجدد داره. داشبورد زنده (Active/Total/OK/Fail) وضعیت سلامت هر ورکر رو نشون می‌ده — سالم، در حال بازیابی، یا در حال cooldown بعد از خرابی.</string>
+    <string name="about_guide_settings_title">تنظیمات</string>
+    <string name="about_guide_settings_desc">پورت HTTP و SOCKS5، کاربر/رمز اختیاری، فاصله‌ی health-check، override رابط شبکه، Kill-switch حالت پراکسی (اگه VPN گوشی قطع بشه اشتراک موقتاً متوقف می‌شه)، زنجیره‌کردن از طریق یه پراکسی محلی دیگه (برای کلاینت‌های VLESS/VMess/Shadowsocks)، و انتخاب زبان.</string>
+    <string name="about_guide_logs_title">گزارش‌ها</string>
+    <string name="about_guide_logs_desc">لاگ زنده‌ی اتصال/قطع کلاینت‌ها، خطاهای پراکسی، و ری‌استارت‌های خودکاری که health monitor انجام می‌ده (تا ۵ بار قبل از تسلیم شدن).</string>
+
+    <!-- About: مقایسه‌ی حالت پراکسی و کامل -->
+    <string name="about_mode_title">حالت پراکسی در برابر حالت کامل</string>
+    <string name="about_mode_proxy_desc">نیاز به روت نداره. یه پراکسی HTTP (و اختیاری SOCKS5) روی گوشی بالا میاد؛ دستگاه‌های دیگه باید آی‌پی و پورت گوشی رو دستی توی تنظیمات پراکسی خودشون وارد کنن — فقط ترافیکی که از این پراکسی رد بشه به اشتراک گذاشته می‌شه.</string>
+    <string name="about_mode_full_desc">نیاز به روت داره (Magisk یا مشابه). با iptables/NAT کل VPN فعال گوشی رو با رابط تترینگ/هات‌اسپات شریک می‌کنه — دستگاه‌های وصل‌شده هیچ تنظیمی لازم ندارن و تمام ترافیکشون پوشش داده می‌شه.</string>
+
+    <!-- About: کلاینت‌های آماده -->
+    <string name="about_clients_title">کلاینت‌های آماده</string>
+    <string name="about_clients_desc">در حالت پراکسی، دستگاه‌های دیگه باید پراکسی رو دستی تنظیم کنن. این دو اسکریپت این کار رو خودکار انجام می‌دن — آی‌پی/پورت گوشی رو وارد کن (یا با اسکن پیداش کن) تا پراکسی سیستم تنظیم بشه، اتصال تست بشه، و بشه به‌عنوان پروفایل برای دفعه‌ی بعد ذخیره‌ش کرد.</string>
+    <string name="about_client_windows">کلاینت — ویندوز (.bat)</string>
+    <string name="about_client_linux">کلاینت — لینوکس (.sh)</string>
+
+    <string name="about_author_title">توسعه‌دهنده</string>
+    <string name="about_author_note">یه پروژه‌ی شخصی و متن‌باز — همه‌جا همین آیدی.</string>
+    <string name="about_github">گیت‌هاب</string>
+    <string name="about_telegram">تلگرام</string>
+    <string name="about_disclaimer">یه پروژه‌ی شخصی و مستقل و متن‌بازه — همینه که هست، بدون هیچ ضمانتی.</string>
+
+    <!-- کارت اتصال Wi-Fi / USB -->
+    <string name="tether_link_title">نوع اتصال کلاینت</string>
+    <string name="tether_link_wifi">اتصال از طریق هات‌اسپات Wi-Fi</string>
+    <string name="tether_link_usb">اتصال از طریق تترینگ USB</string>
+    <string name="tether_link_bluetooth">اتصال از طریق تترینگ بلوتوث</string>
+    <string name="tether_link_unknown">اتصال از یه رابط ناشناخته</string>
+    <string name="tether_link_none_detected">هنوز هیچ هات‌اسپات یا تترینگی پیدا نشد. یکی رو پایین روشن کن، بعد Start رو بزن.</string>
+    <string name="tether_wifi_settings_btn">هات‌اسپات Wi-Fi</string>
+    <string name="tether_usb_enable_btn">روشن‌کردن USB</string>
+    <string name="tether_usb_settings_btn">تنظیمات USB</string>
+    <string name="tether_usb_cable_connected">کابل USB وصله</string>
+    <string name="tether_usb_cable_missing">هنوز کابل USB وصل نیست</string>
+    <string name="usb_tether_enable_failed_toast">روشن‌کردن خودکار USB tethering ممکن نشد — رفتیم سراغ تنظیمات</string>
+    <string name="log_usb_tether_enabled">تترینگ USB روشن شد</string>
+    <string name="log_usb_tether_failed">روشن‌کردن تترینگ USB با روت شکست خورد</string>
+</resources>
