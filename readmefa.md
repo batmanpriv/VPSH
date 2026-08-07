@@ -5,7 +5,7 @@
   <a href="readmefa.md">فارسی</a>
 </p>
 
-**نسخه 3.5.4**
+**نسخه 3.6.3**
 
 > **VPSH** مخفف **VPN Proxy Share Hotspot** هستش. یعنی با این برنامه می‌تونی اینترنت موبایل یا VPN رو با دستگاه‌های دیگه به اشتراک بذاری.
 
@@ -20,7 +20,7 @@
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com/)
 [![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.5.4-brightgreen?style=for-the-badge)](https://github.com/batmanpriv/VPSH)
+[![Version](https://img.shields.io/badge/Version-3.6.3-brightgreen?style=for-the-badge)](https://github.com/batmanpriv/VPSH)
 
 **گوشی خودت رو به یک هاب اشتراک‌گذاری اینترنت تبدیل کن**
 
@@ -31,13 +31,13 @@
 
 | فایل | توضیحات | لینک |
 |------|---------|------|
-| `vpsh-3.5.4.apk` | برنامه اندروید | [دانلود APK](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/VPSH.apk) |
-| `client-windows.bat` | اسکریپت راه‌اندازی پروکسی برای ویندوز | [دانلود BAT](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-windows.bat) |
-| `client-linux.sh` | اسکریپت راه‌اندازی پروکسی برای لینوکس | [دانلود SH](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-linux.sh) |
+| `vpsh-3.6.3.apk` | برنامه اندروید | [دانلود APK](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/VPSH.apk) |
+| `client-windows.bat` | اسکریپت راه‌اندازی پروکسی برای ویندوز | [دانلود BAT](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-windows.bat) |
+| `client-linux.sh` | اسکریپت راه‌اندازی پروکسی برای لینوکس | [دانلود SH](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-linux.sh) |
 
 ---
 
-## 🆕 چی‌های جدید تو نسخه 3.5.4
+## 🆕 چی‌های جدید تو نسخه 3.6.3
 
 این نسخه یه تب کاملاً جدید برای شبکه پیشرفته، آپدیت داخل برنامه، اکسس‌پوینت خودکار، و یه رفع‌باگ مهم برای حالت Full روی گوشی‌های روت‌شده اضافه کرده — به‌علاوه هر چی از ۳.۱.۰ به بعد اضافه شده بود:
 
@@ -435,8 +435,8 @@ export ALL_PROXY=socks5://[آی‌پی گوشی]:1080
 
 | سیستم‌عامل | اسکریپت | توضیح |
 |------------|---------|-------|
-| 🪟 ویندوز | [`client-windows.bat`](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-windows.bat) | مدیریت پراکسی با منوی تعاملی یا خط فرمان |
-| 🐧 لینوکس | [`client-linux.sh`](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-linux.sh) | مدیریت پراکسی با منوی تعاملی یا خط فرمان |
+| 🪟 ویندوز | [`client-windows.bat`](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-windows.bat) | مدیریت پراکسی با منوی تعاملی یا خط فرمان |
+| 🐧 لینوکس | [`client-linux.sh`](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-linux.sh) | مدیریت پراکسی با منوی تعاملی یا خط فرمان |
 
 **روش استفاده (ویندوز):**
 ```cmd
@@ -508,7 +508,7 @@ chmod +x client-linux.sh
 | 🔑 ارور پرمیشن | همه پرمیشن‌های خواسته‌شده (نوتیفیکیشن، VPN) رو بده |
 | 🔌 USB tether کار نمیکنه | اول تو تنظیمات سیستم، USB tethering رو فعال کن |
 | 🌐 تو تب شبکه پیشرفته نمیشه قانون فایروال اضافه/حذف کرد | این قابلیت روت میخواد. اینترفیس‌ها، گیت‌وی و DNS همچنان بدون روت نشون داده میشن |
-| 🐛 روی گوشی روت‌شده، ترافیک حالت Full از VPN رد نمیشه | به نسخه 3.5.4 یا بالاتر آپدیت کن — نسخه‌های قبلی روی رام‌های Treble/vendor میتونستن تو غیرفعال کردن هاردور آفلود Qualcomm (IPA) شکست بخورن و ترافیک هاتسپات بی‌سروصدا از تونل رد نشه |
+| 🐛 روی گوشی روت‌شده، ترافیک حالت Full از VPN رد نمیشه | به نسخه 3.6.3 یا بالاتر آپدیت کن — نسخه‌های قبلی روی رام‌های Treble/vendor میتونستن تو غیرفعال کردن هاردور آفلود Qualcomm (IPA) شکست بخورن و ترافیک هاتسپات بی‌سروصدا از تونل رد نشه |
 | 🔄 تب آپدیت میگه نسخه جدیدی هست ولی چیزی دانلود نمیشه | دانلود و نصب تو مرورگرته، نه داخل خود VPSH — بعد از زدن «باز کردن صفحه دانلود»، دانلودهای مرورگرت رو چک کن |
 
 **لاگ‌ها رو چک کن!** همیشه اول تب لاگ‌ها رو ببین، معمولاً مشکل رو نشون میده.
@@ -783,4 +783,4 @@ chmod +x client-linux.sh
 بله! کدش تو گیت‌هاب هست، می‌تونی روی Cloudflare Workers یا هر سرور WebSocket دیگه‌ای اجراش کنی و آدرسش رو به برنامه اضافه کنی.
 
 **اسکریپت‌های کلاینت برای چی هستن؟**
-`client-windows.bat` و `client-linux.sh` تنظیمات پراکسی دسکتاپت رو خودکار برای وصل شدن به VPSH تنظیم میکنن. هم حالت تعاملی دارن هم خط فرمان.
+`client-windows.bat` و `client-linux.sh` تنظیمات پراکسی دسکتاپت رو خودکار برای وصل شدن به VPSH تنظیم میکنن. هم حالت تعاملی دارن هم خط فرمان.
