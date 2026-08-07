@@ -5,7 +5,7 @@
   <a href="readmefa.md">فارسی</a>
 </p>
 
-**Version 3.5.4**
+**Version 3.6.3**
 
 > **VPSH** stands for **VPN Proxy Share Hotspot** – your all-in-one solution for sharing internet connectivity from your Android device.
 
@@ -20,7 +20,7 @@
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com/)
 [![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.5.4-brightgreen?style=for-the-badge)](https://github.com/batmanpriv/VPSH)
+[![Version](https://img.shields.io/badge/Version-3.6.3-brightgreen?style=for-the-badge)](https://github.com/batmanpriv/VPSH)
 
 **Turn your Android device into a powerful network sharing hub**
 
@@ -32,13 +32,13 @@
 
 | File | Description | Link |
 |------|-------------|------|
-| `vpsh-3.5.4.apk` | Android application | [Download APK](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/VPSH.apk) |
-| `client-windows.bat` | Windows proxy setup script | [Download BAT](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-windows.bat) |
-| `client-linux.sh` | Linux proxy setup script | [Download SH](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-linux.sh) |
+| `vpsh-3.6.3.apk` | Android application | [Download APK](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/VPSH.apk) |
+| `client-windows.bat` | Windows proxy setup script | [Download BAT](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-windows.bat) |
+| `client-linux.sh` | Linux proxy setup script | [Download SH](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-linux.sh) |
 
 ---
 
-## 🆕 What's New in 3.5.4
+## 🆕 What's New in 3.6.3
 
 This release adds a new Advanced Network tab, an in-app update checker, a self-managed access point, and a critical Full Mode fix for rooted phones — on top of everything added since 3.1.0:
 
@@ -139,7 +139,7 @@ This release adds a new Advanced Network tab, an in-app update checker, a self-m
 <details>
 <summary>Click to expand</summary>
 
-1. [What's New in 3.5.4](#-whats-new-in-354)
+1. [What's New in 3.6.3](#-whats-new-in-354)
 2. [Overview](#-overview)
 3. [Features at a Glance](#-features-at-a-glance)
 4. [Installation](#-installation)
@@ -638,8 +638,8 @@ For quick and easy proxy configuration on your desktop, VPSH provides automated 
 
 | Platform | Script | Description |
 |----------|--------|-------------|
-| 🪟 **Windows** | [`client-windows.bat`](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-windows.bat) | Interactive and command-line proxy manager for Windows |
-| 🐧 **Linux** | [`client-linux.sh`](https://github.com/batmanpriv/VPSH/releases/download/3.5.4/client-linux.sh) | Interactive and command-line proxy manager for Linux |
+| 🪟 **Windows** | [`client-windows.bat`](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-windows.bat) | Interactive and command-line proxy manager for Windows |
+| 🐧 **Linux** | [`client-linux.sh`](https://github.com/batmanpriv/VPSH/releases/download/3.6.3/client-linux.sh) | Interactive and command-line proxy manager for Linux |
 
 **Windows Usage:**
 ```cmd
@@ -711,7 +711,7 @@ BatProxy workers are servers that connect to VPSH. To set up a worker:
 | 🔑 Permission errors | Grant all requested permissions (notifications, VPN). |
 | 🔌 USB tether not working | Enable USB tethering in system settings first. |
 | 🌐 Can't add/delete firewall rules in the Network tab | This needs root. Interfaces, gateway, and DNS still show without it. |
-| 🐛 Full Mode traffic isn't going through the VPN on a rooted phone | Update to 3.5.4 or later — earlier versions could fail to disable Qualcomm IPA hardware offload on Treble/vendor ROMs, letting hotspot traffic bypass the tunnel silently. |
+| 🐛 Full Mode traffic isn't going through the VPN on a rooted phone | Update to 3.6.3 or later — earlier versions could fail to disable Qualcomm IPA hardware offload on Treble/vendor ROMs, letting hotspot traffic bypass the tunnel silently. |
 | 🔄 Update tab says a newer version exists but nothing downloads | The APK downloads and installs through your browser, not inside VPSH — check your browser's downloads after tapping "Open download page". |
 
 ### Logs
