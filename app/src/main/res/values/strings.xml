@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VPSH</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_logs">Logs</string>
+    <string name="nav_network">Network</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">VPSH</string>
+    <string name="dashboard_subtitle">Share your VPN with other devices</string>
+
+    <string name="status_running">Active</string>
+    <string name="status_starting">Starting…</string>
+    <string name="status_paused_killswitch">Paused (Kill-switch)</string>
+    <string name="status_error">Error</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="public_ip_detecting">Checking IP…</string>
+    <string name="public_ip_line">IP: %1$s   %2$s %3$s</string>
+
+    <string name="mode_label_full">Full mode (NAT, root)</string>
+    <string name="mode_label_proxy">Proxy mode</string>
+
+    <string name="iface_summary">Interface: %1$s (%2$s)</string>
+    <string name="iface_summary_with_vpn">Interface: %1$s (%2$s)  ←  VPN: %3$s</string>
+
+    <string name="share_mode_title">Sharing mode</string>
+    <string name="mode_proxy">Proxy</string>
+    <string name="mode_proxy_sub">No root needed</string>
+    <string name="mode_full">Full</string>
+    <string name="mode_full_sub_rooted">Root available</string>
+    <string name="mode_full_sub_needed">Root needed</string>
+
+    <string name="btn_start">Start sharing</string>
+    <string name="btn_stop">Stop sharing</string>
+
+    <string name="stat_clients">Clients</string>
+    <string name="stat_traffic">Traffic</string>
+    <string name="stat_port">Port</string>
+
+    <string name="connected_devices">Connected devices</string>
+    <string name="no_devices_yet">No devices connected yet</string>
+    <string name="blocked_devices_title">Blocked devices</string>
+    <string name="no_blocked_devices">No devices blocked</string>
+    <string name="nav_hotspot">Hotspot</string>
+    <string name="hotspot_subtitle">Hard, hotspot-level access control — bans a device by its Wi‑Fi/USB MAC address, so it can\'t reach anything through the hotspot at all (not just the sharing proxy). Needs root.</string>
+    <string name="hotspot_active_label">Hotspot active</string>
+    <string name="hotspot_inactive_label">No hotspot detected</string>
+    <string name="hotspot_root_required">Banning devices from the hotspot itself needs root (Magisk or similar). Without it, you can still use the proxy-level block on the Dashboard.</string>
+    <string name="hotspot_devices_title">Devices on hotspot</string>
+    <string name="hotspot_no_devices">No devices detected on the hotspot right now</string>
+    <string name="hotspot_no_hotspot_detected">Turn on your Wi‑Fi hotspot or USB tethering to see connected devices here</string>
+    <string name="hotspot_banned_title">Banned from hotspot</string>
+    <string name="hotspot_no_banned">No devices banned</string>
+    <string name="hotspot_ban_action">Ban from hotspot</string>
+    <string name="hotspot_unban_action">Unban</string>
+    <string name="rename_device_action">Rename</string>
+    <string name="block_device_action">Block</string>
+    <string name="unblock_device_action">Unblock</string>
+    <string name="limit_device_action">Limit speed</string>
+
+    <string name="quick_connect_title">Quick connect</string>
+    <string name="quick_connect_hint">Enter this address in the proxy settings on the other device</string>
+    <string name="quick_connect_user">user: %1$s</string>
+    <string name="quick_connect_tab_manual">Manual</string>
+    <string name="quick_connect_tab_pac">Auto (any OS)</string>
+    <string name="pac_hint">Windows/macOS/Linux: set this as the "Automatic proxy configuration URL" in network settings. Every app on that device will use the proxy automatically, no manual setup needed.</string>
+    <string name="pac_disabled_hint">Automatic proxy configuration is turned off. Enable it in Settings to get a one-tap setup link for any OS.</string>
+    <string name="close">Close</string>
+
+    <string name="rename_dialog_title">Rename device (%1$s)</string>
+    <string name="rename_dialog_label">Custom name</string>
+    <string name="limit_dialog_title">Speed limit (%1$s)</string>
+    <string name="limit_dialog_label">Max speed, kbit/s (0 = unlimited)</string>
+    <string name="limit_dialog_presets_hint">Presets</string>
+    <string name="limit_preset_unlimited">Unlimited</string>
+    <string name="limit_active_label">Limited to %1$d kbit/s</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+
+    <string name="ports_section">Ports</string>
+    <string name="http_proxy_port">HTTP proxy port</string>
+    <string name="enable_socks5">Enable SOCKS5</string>
+    <string name="socks5_udp_hint">Includes UDP relay — games, voice/video calls and DNS work over SOCKS5, not just web browsing.</string>
+    <string name="socks5_port">SOCKS5 port</string>
+    <string name="enable_pac">Auto proxy setup (PAC) for any OS</string>
+    <string name="enable_pac_hint">Lets Windows, macOS, Linux and other devices auto-apply the proxy with one URL — no per-app config.</string>
+    <string name="pac_port">PAC server port</string>
+
+    <string name="ss_section">Shadowsocks (no root)</string>
+    <string name="ss_section_hint">A one-scan alternative to setting up a proxy by hand: any standard Shadowsocks app (official client, Outline, Shadowrocket, NekoBox…) imports the QR code and just works — no picking HTTP vs SOCKS5, no typing an IP. Uses AES-256-GCM. TCP only for now; for UDP (games, calls, DNS) use the SOCKS5 port above.</string>
+    <string name="enable_shadowsocks">Enable Shadowsocks endpoint</string>
+    <string name="ss_port">Shadowsocks port</string>
+    <string name="ss_password_label">Password</string>
+    <string name="ss_password_required">Set a password to enable Shadowsocks — an empty password isn\'t allowed for this protocol.</string>
+    <string name="ss_generate_password">Generate</string>
+
+    <string name="auth_section">Authentication</string>
+    <string name="require_auth">Require username/password</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="chain_section">Chain through another proxy</string>
+    <string name="chain_desc">To use VLESS/VMess/Shadowsocks: turn on \"local proxy only\" mode in that client app and enter its local SOCKS5/HTTP port here. For raw SOCKS4/SOCKS5/HTTP configs, just enter them directly here.</string>
+    <string name="chain_off">Off</string>
+    <string name="chain_socks5">SOCKS5</string>
+    <string name="chain_http">HTTP</string>
+    <string name="upstream_address">Address (usually 127.0.0.1)</string>
+    <string name="upstream_port">Port</string>
+    <string name="upstream_username_optional">Username (optional)</string>
+    <string name="upstream_password_optional">Password (optional)</string>
+    <string name="upstream_profiles_title">Saved profiles</string>
+    <string name="upstream_profiles_hint">Save the upstream above as a named profile, then switch between them in one tap.</string>
+    <string name="upstream_profiles_none">No saved profiles yet.</string>
+    <string name="upstream_profile_apply">Use</string>
+    <string name="upstream_profile_delete">Delete</string>
+    <string name="upstream_profile_name_hint">Profile name</string>
+    <string name="upstream_profile_save">Save current</string>
+
+    <string name="health_section">Reliability &amp; health</string>
+    <string name="auto_restart">Auto-restart on failure</string>
+    <string name="health_interval_seconds">Health check interval (seconds)</string>
+    <string name="kill_switch_desc">Kill-switch: stop the proxy if the VPN drops</string>
+
+    <string name="full_mode_section">Full mode (root)</string>
+    <string name="disconnect_clients_on_vpn_drop">Cut off clients if the VPN drops</string>
+    <string name="block_ipv6_leak">Block IPv6 leaks</string>
+    <string name="disable_ipa_offload">Disable Qualcomm IPA hardware offload</string>
+    <string name="disable_ipa_offload_hint">On Qualcomm devices, hotspot traffic can be fast-pathed in hardware straight to the mobile/Wi‑Fi uplink, skipping iptables entirely — this is why VPN sharing can fail with every VPN app, not just this one. Full mode now auto-detects this (see the Logs tab) and, when you turn this on, stops the daemon behind it and restarts it when you stop sharing. On some devices that same daemon also carries the phone\'s own mobile data, so stopping it can briefly interrupt your own connection while sharing is on — Full mode checks for that and puts it back automatically if it happens, but only turn this on if plain Full mode\'s routing looks correct while no traffic actually goes through.</string>
+
+    <string name="ap_section">Access point (root)</string>
+    <string name="ap_section_hint">Instead of turning on the phone\'s hotspot by hand, VPSH creates its own Wi‑Fi access point with the name and password below and shares it through the tunnel automatically. Needs root and Android 11+; if it can\'t be created, VPSH falls back to detecting a hotspot you turned on manually.</string>
+    <string name="ap_section_hint_no_root">Creating a named access point automatically needs root — this is an Android restriction on setting a custom Wi‑Fi name/password from an app, not a limitation of VPSH. Without root, turn on the phone\'s hotspot yourself below and use Proxy mode.</string>
+    <string name="ap_section_hint_unsupported_os">Not available on this device: creating a named access point uses an Android system command that only exists on Android 11 and up. Your phone is on an older Android version, so this is a hard OS limit — root doesn\'t change it, and it will never work here. Turn on the phone\'s hotspot yourself instead; VPSH will detect it automatically.</string>
+    <string name="ap_auto_create">Create access point automatically</string>
+    <string name="ap_ssid_label">Network name (SSID)</string>
+    <string name="ap_password_label">Password (leave empty for open network)</string>
+    <string name="ap_password_hint">8–63 characters for a password-protected network, or leave empty for no password.</string>
+    <string name="ap_test_title">Create access point now</string>
+    <string name="ap_test_hint">Test AP creation on its own, without starting proxy/full sharing — useful for checking whether it works on this device.</string>
+    <string name="ap_test_button">Create access point</string>
+    <string name="ap_test_creating">Creating…</string>
+    <string name="ap_test_stop_button">Stop access point</string>
+    <string name="ap_test_active">Access point \"%1$s\" is running</string>
+    <string name="ap_test_success">Access point created successfully.</string>
+    <string name="ap_test_failed">Couldn\'t create the access point: %1$s</string>
+    <string name="ap_test_failed_generic">unknown error — check the Logs tab for details</string>
+
+    <string name="iface_override_section">Network interface override (optional)</string>
+    <string name="hotspot_iface_override">Hotspot interface (e.g. wlan0)</string>
+    <string name="vpn_iface_override">VPN interface (e.g. tun0)</string>
+
+    <!-- Logs -->
+    <string name="logs_title">Logs</string>
+    <string name="health_check_button">Health check</string>
+    <string name="no_logs_yet">No logs yet</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">VPSH — VPN sharing</string>
+    <string name="notif_channel_desc">Status of VPN/proxy sharing</string>
+    <string name="notif_preparing">Getting ready…</string>
+    <string name="notif_full_running">Sharing VPN (%1$s → %2$s)</string>
+    <string name="notif_proxy_running">Proxy active on port %1$d</string>
+    <string name="notif_paused_vpn_down">Paused — VPN is down</string>
+    <string name="notif_stopped">Stopped</string>
+    <string name="notif_error">Error: %1$s</string>
+    <string name="notif_action_stop">Stop</string>
+    <string name="notif_action_close">Close</string>
+
+    <!-- Service log lines -->
+    <string name="log_start_mode">Starting in %1$s mode</string>
+    <string name="mode_word_full">full (root)</string>
+    <string name="mode_word_proxy">proxy</string>
+    <string name="log_nat_established">NAT set up on %1$s → %2$s</string>
+    <string name="log_health_ok">Health check: all good</string>
+    <string name="log_health_fail">Health check: found a problem</string>
+    <string name="log_killswitch_paused">Kill-switch: VPN dropped — proxy paused for now</string>
+    <string name="log_killswitch_resumed">Kill-switch: VPN is back — proxy resumed</string>
+    <string name="log_service_stopped">Service stopped</string>
+    <string name="log_error_prefix">Error: %1$s</string>
+    <string name="log_http_started">HTTP proxy started on port %1$d</string>
+    <string name="log_socks5_started">SOCKS5 proxy started on port %1$d</string>
+    <string name="log_socks5_failed">Warning: SOCKS5 failed to start, continuing with HTTP proxy only</string>
+    <string name="log_ss_started">Shadowsocks endpoint started on port %1$d</string>
+    <string name="log_ss_failed">Warning: Shadowsocks failed to start (port busy?)</string>
+    <string name="log_ss_no_password">Warning: Shadowsocks is enabled but has no password set — skipping it</string>
+    <string name="log_pac_started">PAC auto-config server started: %1$s</string>
+    <string name="log_pac_failed">Warning: PAC server failed to start (port busy?)</string>
+    <string name="log_guest_created">Guest link created: %1$s</string>
+    <string name="quick_connect_tab_guest">Guest link</string>
+    <string name="guest_create_title">Create a guest link</string>
+    <string name="guest_ttl_label">Expires after (minutes)</string>
+    <string name="guest_quota_label">Data limit (MB, 0 = unlimited)</string>
+    <string name="guest_create_button">Create guest link</string>
+    <string name="guest_active_title">Active guest links</string>
+    <string name="guest_none">No guest links yet.</string>
+    <string name="guest_expires_in">expires in %1$d min</string>
+    <string name="guest_expired">expired</string>
+    <string name="guest_quota_unlimited">unlimited data</string>
+    <string name="guest_quota_label_short">%1$d MB cap</string>
+    <string name="guest_revoke">Revoke</string>
+    <string name="guest_credentials">user: %1$s   pass: %2$s</string>
+    <string name="auto_start_boot">Auto-start after reboot</string>
+    <string name="auto_start_boot_hint">If the service was running when the phone shut down, it restarts automatically once the hotspot/root are available again. Off by default.</string>
+    <string name="game_mode">Game Mode (Full mode only)</string>
+    <string name="game_mode_hint">Prioritizes real-time traffic (games, calls, video chats) over bulk downloads on connected devices, so one device downloading a big file doesn\'t add lag to another device\'s game.</string>
+    <string name="log_game_mode_on">Game Mode enabled — real-time traffic is now prioritized</string>
+    <string name="log_game_mode_failed">Warning: Game Mode failed to apply (tc unavailable on this device?)</string>
+    <string name="log_ap_unsupported">Warning: automatic access point needs Android 11+ — falling back to detecting a manually-enabled hotspot</string>
+    <string name="log_ap_root_failed">Warning: couldn\'t get root to create the access point</string>
+    <string name="log_ap_create_failed">Warning: couldn\'t create the access point (%1$s) — falling back to detecting a manually-enabled hotspot</string>
+    <string name="log_ap_created">Access point \"%1$s\" created</string>
+    <string name="log_ap_iface_timeout">Warning: the access point started but its network interface didn\'t come up in time</string>
+    <string name="log_ap_stopped">Access point turned off</string>
+
+    <!-- Status / error messages -->
+    <string name="status_full_running">Full VPN sharing is active — clients don\'t need to change any settings</string>
+    <string name="status_proxy_running">Proxy is active — on other devices, set the Proxy to IP %1$s, port %2$d%3$s</string>
+    <string name="status_proxy_chain_note"> — chained through %1$s at %2$s:%3$d</string>
+    <string name="status_paused_vpn_down">Paused (Kill-switch): the VPN is down</string>
+
+    <string name="err_root_required_toast">Full mode needs root access on this device</string>
+    <string name="err_no_hotspot">Couldn\'t find a hotspot/tethering interface. Please turn on hotspot or USB tethering.</string>
+    <string name="err_no_root">Root access wasn\'t granted. Full mode doesn\'t work without root.</string>
+    <string name="err_no_vpn">Couldn\'t find an active VPN tunnel. Connect to a VPN first.</string>
+    <string name="err_nat_failed">Setting up NAT rules (iptables) failed.</string>
+    <string name="err_routing_failed">Couldn\'t route hotspot traffic through the VPN tunnel (ip route/rule failed).</string>
+    <string name="err_http_port_busy">Starting the HTTP proxy on port %1$d failed (maybe the port\'s already in use?)</string>
+    <string name="err_gave_up">Stopped after several failed restart attempts.</string>
+
+    <!-- Quick Settings Tile -->
+    <string name="tile_active">Active</string>
+    <string name="tile_starting">Starting…</string>
+    <string name="tile_paused">Paused</string>
+    <string name="tile_error">Error</string>
+    <string name="tile_stopped">Stopped</string>
+
+    <!-- Language switcher -->
+    <string name="language_section">Language</string>
+    <string name="language_system">System default</string>
+    <string name="language_english">English</string>
+    <string name="language_persian">فارسی</string>
+
+    <!-- BatProxy tab -->
+    <string name="batproxy_tab_title">BatProxy</string>
+    <string name="batproxy_subtitle">Tunnel your whole connection through Cloudflare Workers</string>
+    <string name="batproxy_start">Connect</string>
+    <string name="batproxy_stop">Disconnect</string>
+    <string name="batproxy_status_connected">Connected</string>
+    <string name="batproxy_region_detecting">Detecting exit region…</string>
+    <string name="batproxy_status_connecting">Connecting…</string>
+    <string name="batproxy_status_disconnected">Disconnected</string>
+    <string name="batproxy_stat_active">Active</string>
+    <string name="batproxy_stat_total">Total</string>
+    <string name="batproxy_stat_ok">OK</string>
+    <string name="batproxy_stat_fail">Fail</string>
+    <string name="batproxy_workers_title">Workers</string>
+    <string name="batproxy_no_workers">No workers added yet</string>
+    <string name="batproxy_add_worker">Add worker</string>
+    <string name="batproxy_worker_url">Worker URL (wss://…)</string>
+    <string name="batproxy_worker_password">Password</string>
+    <string name="batproxy_remove_worker">Remove</string>
+    <string name="batproxy_dns_title">DNS resolver</string>
+    <string name="batproxy_dns_host">Host</string>
+    <string name="batproxy_dns_port">Port</string>
+
+    <string name="split_tunnel_title">Split tunneling</string>
+    <string name="split_tunnel_hint">Choose which apps on this phone use the tunnel. Handy for keeping banking apps on the normal connection while everything else goes through BatProxy.</string>
+    <string name="split_tunnel_off">Off — everything uses the tunnel</string>
+    <string name="split_tunnel_exclude">Exclude selected apps (they bypass the tunnel)</string>
+    <string name="split_tunnel_include_only">Only selected apps use the tunnel</string>
+    <string name="split_tunnel_pick_apps">Choose apps (%1$d selected)</string>
+    <string name="split_tunnel_pick_apps_title">Select apps</string>
+    <string name="batproxy_worker_status_closed">Healthy</string>
+    <string name="batproxy_worker_status_half_open">Recovering</string>
+    <string name="batproxy_worker_status_open">Cooling down</string>
+    <string name="batproxy_rtt_label">%1$dms</string>
+    <string name="batproxy_cooldown_label">%1$ds left</string>
+    <string name="batproxy_err_no_workers">Add at least one worker first</string>
+    <string name="batproxy_err_vpn_setup">Couldn\'t set up the VPN tunnel</string>
+    <string name="batproxy_notif_channel_name">BatProxy — tunnel status</string>
+    <string name="batproxy_notif_channel_desc">Status of the BatProxy VPN tunnel</string>
+    <string name="batproxy_notif_connecting">Connecting…</string>
+    <string name="batproxy_notif_connected">Tunnel active</string>
+    <string name="batproxy_notif_stopped">Disconnected</string>
+    <string name="batproxy_notif_error">Error: %1$s</string>
+    <string name="batproxy_vpn_permission_denied">VPN permission wasn\'t granted</string>
+    <string name="batproxy_limitations_note">Only TCP-based traffic is tunnelled (web, apps, TLS) — UDP-based protocols like games or video calls that rely on QUIC/HTTP3 won\'t route through this yet.</string>
+
+    <!-- About tab -->
+    <string name="nav_about">About</string>
+    <string name="nav_update">Update</string>
+    <string name="about_app_title">VPSH</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_description">VPSH shares your phone\'s internet with other devices over USB tethering or a Wi‑Fi hotspot — either as a full transparent VPN share (needs root) or as a local proxy (no root needed). BatProxy is a separate, second way to get online: it tunnels your own device\'s traffic through Cloudflare Workers, useful when your regular connection is blocked or unreliable.</string>
+
+    <string name="about_features_title">What\'s inside</string>
+    <string name="about_feature_proxy">Proxy mode — share your VPN with other devices, no root required</string>
+    <string name="about_feature_full">Full mode — transparent NAT sharing for rooted devices</string>
+    <string name="about_feature_batproxy">BatProxy — tunnels the whole device through Cloudflare Workers, acting as its own VPN</string>
+    <string name="about_feature_bilingual">Fully bilingual — English and Persian, switchable anytime from Settings</string>
+    <string name="about_feature_killswitch">Kill-switch, health checks, and auto-restart so a dropped VPN never silently leaks</string>
+
+    <!-- About: tab-by-tab guide -->
+    <string name="about_guide_title">What each tab does</string>
+    <string name="about_guide_dashboard_title">Dashboard</string>
+    <string name="about_guide_dashboard_desc">The main screen. \"Sharing mode\" switches between Proxy and Full (Full is greyed out without root). \"Start sharing / Stop sharing\" turns the foreground service on or off — once it\'s on, a persistent notification with its own Stop button lets you turn it off without opening the app again. Below that, the current public IP and exit country/flag are shown and refreshed every 5 seconds. The QR button next to Start shows the phone\'s IP, HTTP/SOCKS5 ports, and login (if you turned on authentication) as a scannable code. Stat chips show connected clients and traffic, and the device list lets you rename, rate-limit, or block each connected client. A blocked device is dropped immediately and disappears from the connected list, but it stays listed in a separate \"Blocked devices\" section below — with an Unblock button — so it can always be un-blocked later, even after it\'s no longer connected.</string>
+    <string name="about_guide_hotspot_title">Hotspot</string>
+    <string name="about_guide_hotspot_desc">A dedicated tab for the hotspot itself, separate from sharing. The Dashboard\'s block only refuses the sharing proxy — a blocked device can still join the hotspot and reach other things on it. This tab bans by MAC address instead, right at the hotspot interface, so a banned device can\'t get anywhere through it at all — in Proxy or Full mode, or even with sharing stopped. It lists every device currently on the hotspot (from the system\'s neighbor table) with a Ban button, and a separate \"Banned from hotspot\" list with Unban, so past bans stay manageable even after the device disconnects. Needs root.</string>
+    <string name="about_guide_batproxy_title">BatProxy</string>
+    <string name="about_guide_batproxy_desc">Connect / Disconnect turns the Cloudflare Workers tunnel on or off. The worker list is where you add or remove worker URLs and passwords; changing it while connected requires a reconnect. The live dashboard (Active / Total / OK / Fail) shows each worker\'s health — healthy, recovering, or cooling down after failures.</string>
+    <string name="about_guide_settings_title">Settings</string>
+    <string name="about_guide_settings_desc">HTTP and SOCKS5 ports, optional username/password, health‑check interval, network interface overrides, the proxy‑mode kill‑switch (pauses sharing if the phone\'s VPN drops), chaining through another local proxy (for VLESS/VMess/Shadowsocks clients), and the language switcher.</string>
+    <string name="about_guide_logs_title">Logs</string>
+    <string name="about_guide_logs_desc">A live feed of client connects/disconnects, proxy errors, and automatic restarts triggered by the health monitor (up to 5 attempts before it gives up).</string>
+
+    <!-- About: proxy mode vs full mode -->
+    <string name="about_mode_title">Proxy mode vs. Full mode</string>
+    <string name="about_mode_proxy_desc">No root needed. An HTTP proxy (and optional SOCKS5 proxy) runs on the phone; other devices must manually enter the phone\'s IP and port in their own proxy settings — only traffic that goes through that proxy is shared.</string>
+    <string name="about_mode_full_desc">Needs root (Magisk or similar). Uses iptables/NAT to share the phone\'s entire active VPN with the tethering/hotspot interface — connected devices need zero configuration, and all of their traffic is covered.</string>
+
+    <!-- About: ready-made clients -->
+    <string name="about_clients_title">Ready-made clients</string>
+    <string name="about_clients_desc">In Proxy mode, other devices need their proxy settings configured manually. These two scripts do that automatically — enter the phone\'s IP/port (or scan for it) and they set up the system proxy, test the connection, and can save it as a profile for next time.</string>
+    <string name="about_client_windows">Client — Windows (.bat)</string>
+    <string name="about_client_linux">Client — Linux (.sh)</string>
+
+    <string name="about_author_title">Developer</string>
+    <string name="about_author_note">Built as a personal, open project — same handle everywhere below.</string>
+    <string name="about_github">GitHub</string>
+    <string name="about_telegram">Telegram</string>
+    <string name="about_disclaimer">An independent, open-source personal project — provided as-is, with no warranty.</string>
+
+    <!-- Wi-Fi / USB tether link card -->
+    <string name="tether_link_title">Client link</string>
+    <string name="tether_link_wifi">Connected via Wi-Fi hotspot</string>
+    <string name="tether_link_usb">Connected via USB tethering</string>
+    <string name="tether_link_bluetooth">Connected via Bluetooth tethering</string>
+    <string name="tether_link_unknown">Connected via an unrecognized interface</string>
+    <string name="tether_link_none_detected">No hotspot or tether link detected yet. Turn one on below, then press Start.</string>
+    <string name="tether_wifi_settings_btn">Wi-Fi hotspot</string>
+    <string name="tether_usb_enable_btn">Enable USB tether</string>
+    <string name="tether_usb_settings_btn">USB tether settings</string>
+    <string name="tether_usb_cable_connected">USB cable detected</string>
+    <string name="tether_usb_cable_missing">No USB cable plugged in yet</string>
+    <string name="usb_tether_enable_failed_toast">Couldn\'t enable USB tethering automatically — opening settings instead</string>
+    <string name="log_usb_tether_enabled">USB tethering enabled</string>
+    <string name="log_usb_tether_failed">Failed to enable USB tethering via root</string>
+    <string name="log_ipa_detected">Qualcomm IPA hardware offload detected on this device — if connected devices don\'t actually go through the tunnel, try "Disable Qualcomm IPA hardware offload" in Settings (may briefly interrupt this phone\'s own mobile data while it\'s on)</string>
+    <string name="log_ipa_stopped">IPA offload daemon stopped</string>
+    <string name="log_ipa_stop_failed">Warning: couldn\'t fully stop the IPA offload daemon — hotspot traffic may bypass the tunnel on this device. Try rebooting, or check the Logs after a reboot</string>
+    <string name="log_ipa_unsafe">Warning: stopping the IPA offload daemon broke this phone\'s own mobile data on this device, so it was left running and offload could not be disabled — this device likely can\'t use Full mode reliably. Data has been restored</string>
+    <string name="ap_status_active">Access point \"%1$s\" created automatically by VPSH</string>
+    <string name="quick_connect_tab_wifi">Join Wi-Fi</string>
+    <string name="ap_join_hint">Scan to join the access point directly — no manual proxy setup needed.</string>
+    <string name="quick_connect_tab_ss">Shadowsocks</string>
+    <string name="ss_join_hint">Scan with any Shadowsocks app — it imports the server automatically, no manual setup.</string>
+
+    <string name="update_title">Update</string>
+    <string name="update_current_version">Current version: %1$s</string>
+    <string name="update_idle_desc">Check GitHub for a newer release of VPSH.</string>
+    <string name="update_check_button">Check for update</string>
+    <string name="update_checking">Checking for updates…</string>
+    <string name="update_up_to_date">You\'re on the latest version</string>
+    <string name="update_check_again">Check again</string>
+    <string name="update_available">Version %1$s is available</string>
+    <string name="update_available_hint">Opens the GitHub release page in your browser — download and install the APK from there.</string>
+    <string name="update_open_page_button">Open download page</string>
+    <string name="update_failed">Couldn\'t check for updates</string>
+    <string name="update_retry">Retry</string>
+    <string name="update_source_hint">Checks github.com/batmanpriv/VPSH for a newer release. Downloading and installing happens in your browser, not inside VPSH — Google Play Protect treats apps that update themselves in-app as suspicious, so this way avoids that.</string>
+
+    <!-- Advanced Network tab -->
+    <string name="network_subtitle">Interfaces, IPs, routing and firewall (iptables) rules</string>
+    <string name="network_refresh">Refresh</string>
+    <string name="network_root_yes">Root available</string>
+    <string name="network_root_no">No root detected</string>
+    <string name="network_root_hint">Interfaces, IP addresses, gateway and DNS work with or without root. Reading and writing firewall (iptables) rules and advanced routing (ip rule / ip route) needs root.</string>
+    <string name="network_dismiss">Dismiss</string>
+
+    <string name="network_section_interfaces">Interfaces</string>
+    <string name="network_no_interfaces">No active interfaces found.</string>
+    <string name="network_iface_ip">IP: %1$s/%2$s</string>
+    <string name="network_iface_state">State: %1$s</string>
+    <string name="network_iface_mtu">MTU: %1$s</string>
+    <string name="network_iface_mac">MAC: %1$s</string>
+    <string name="network_iface_traffic">RX %1$s · TX %2$s</string>
+
+    <string name="network_section_gateway_dns">Gateway &amp; DNS</string>
+    <string name="network_gateway_label">Default gateway: %1$s</string>
+    <string name="network_dns_label">DNS servers: %1$s</string>
+
+    <string name="network_section_firewall">Firewall rules (iptables)</string>
+    <string name="network_firewall_root_required">Reading and writing iptables rules needs root (Magisk or similar). Interfaces, gateway and DNS above still work without it.</string>
+    <string name="network_no_rules">No rules found for this table.</string>
+    <string name="network_chain_policy">policy: %1$s</string>
+    <string name="network_chain_empty">No rules in this chain.</string>
+    <string name="network_delete_rule">Delete rule</string>
+
+    <string name="network_add_rule_title">Add a rule</string>
+    <string name="network_expand">Add</string>
+    <string name="network_collapse">Close</string>
+    <string name="network_field_chain">Chain</string>
+    <string name="network_field_action">Action</string>
+    <string name="network_field_protocol">Protocol</string>
+    <string name="network_field_source">Source (e.g. 192.168.1.5 or 192.168.1.0/24)</string>
+    <string name="network_field_destination">Destination</string>
+    <string name="network_field_in_iface">In interface</string>
+    <string name="network_field_out_iface">Out interface</string>
+    <string name="network_field_port">Port</string>
+    <string name="network_btn_apply">Add rule</string>
+    <string name="network_btn_run">Run</string>
+
+    <string name="network_raw_iptables_title">Raw iptables command (advanced)</string>
+    <string name="network_raw_iptables_placeholder">-t nat -L -n -v</string>
+
+    <string name="network_section_routing">Routing (ip rule / ip route)</string>
+    <string name="network_ip_rules_title">ip rule show</string>
+    <string name="network_ip_routes_title">ip route show</string>
+    <string name="network_no_data">No data.</string>
+    <string name="network_routing_root_hint">Editing routing rules needs root.</string>
+    <string name="network_raw_ip_title">Raw ip command (advanced)</string>
+    <string name="network_raw_ip_placeholder">route add default dev tun0 table 61</string>
+</resources>
